@@ -11,10 +11,6 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
 }
 
@@ -27,15 +23,31 @@ header {
 }
 
 main {
-    width: 100%;
-    max-width: 1200px;
     padding: 20px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.about-me, .projects {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.projects {
+    margin-right: 0;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     gap: 20px;
 }
 
@@ -47,7 +59,7 @@ main {
 }
 
 .title {
-    grid-column: 1 / 3; /* Span across both columns */
+    grid-column: 1 / 5; /* Span across all columns */
     grid-row: 1 / 2;   /* Occupies the top row */
 }
 
@@ -80,23 +92,14 @@ main {
     text-decoration: underline;
 }
 
-.about-me {
-    grid-column: 1 / 2; /* Left column */
-    grid-row: 2 / 3;   /* Bottom row */
-}
-
-.projects {
-    grid-column: 2 / 3; /* Right column */
-    grid-row: 2 / 3;   /* Bottom row */
-}
-
-.about-me h3, .projects h3 {
-    margin-bottom: 10px;
-}
-
-.about-me p, .projects p {
-    font-size: 0.9em; /* Smaller font size for additional content */
+.empty {
+    /* Style for empty quadrants */
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 100%; /* Ensure full height */
 }
 
 footer {
