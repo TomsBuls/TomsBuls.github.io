@@ -37,8 +37,31 @@ main {
 
 .projects {
     display: grid;
-    grid-template-columns: 1fr; /* Default to single column layout */
+    grid-template-columns: 1fr; /* Single column by default */
     gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Span the full width of the grid */
+}
+
+.half-width {
+    grid-column: span 1; /* Default to span 1 column */
+}
+
+/* Responsive grid layout for projects */
+@media (min-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    }
+
+    .half-width {
+        grid-column: span 1; /* Ensure it takes one column */
+    }
+
+    .full-width {
+        grid-column: 1 / -1; /* Full width */
+    }
 }
 
 .project {
@@ -73,16 +96,9 @@ main {
     text-decoration: underline;
 }
 
-.full-width {
-    grid-column: 1 / -1; /* Full width of the container */
-}
-
-.half-width {
-    grid-column: span 1; /* Half width, depending on the number of columns */
-}
-
+/* Add visual separator */
 .project:not(:last-of-type) {
-    border-bottom: 2px dotted #ddd; /* Dotted separator */
+    border-bottom: 2px dotted #ddd;
 }
 
 footer {
