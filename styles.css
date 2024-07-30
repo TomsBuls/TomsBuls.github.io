@@ -65,10 +65,6 @@ main {
         grid-template-columns: 1fr 1fr; /* Two columns layout for larger screens */
         gap: 20px; /* Add gap between the columns */
     }
-
-    .half-width {
-        width: calc(50% - 10px); /* Reduce width to ensure spacing */
-    }
 }
 
 .project {
@@ -80,6 +76,16 @@ main {
     width: 100%;
     box-sizing: border-box; /* Ensure padding and border are included in width */
     margin-bottom: 20px; /* Add margin to separate the projects */
+}
+
+/* Half-width project specific styles */
+.project.half-width {
+    width: calc(50% - 10px); /* Adjust width to ensure spacing */
+    margin-right: 10px; /* Add margin to separate the projects */
+}
+
+.project.half-width:last-child {
+    margin-right: 0; /* Remove margin for the last project in the row */
 }
 
 /* Description styling */
