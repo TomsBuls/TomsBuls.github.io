@@ -37,7 +37,7 @@ main {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr; /* Default to single column layout */
     gap: 20px;
 }
 
@@ -53,13 +53,18 @@ main {
     margin-bottom: 10px;
 }
 
-.project p {
-    margin-bottom: 10px;
+.project ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project ul li {
+    margin-bottom: 5px;
 }
 
 .project a {
-    display: inline-block;
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
 }
@@ -68,13 +73,16 @@ main {
     text-decoration: underline;
 }
 
-.project ul {
-    list-style: none;
-    padding: 0;
+.full-width {
+    grid-column: 1 / -1; /* Full width of the container */
 }
 
-.project ul li {
-    margin-bottom: 5px;
+.half-width {
+    grid-column: span 1; /* Half width, depending on the number of columns */
+}
+
+.project:not(:last-of-type) {
+    border-bottom: 2px dotted #ddd; /* Dotted separator */
 }
 
 footer {
