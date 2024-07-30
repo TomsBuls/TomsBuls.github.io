@@ -50,13 +50,14 @@ main {
     text-align: left; /* Left align text */
 }
 
-/* Half-width projects: Align content to the left */
+/* Half-width projects: Adjusted width and left alignment */
 .half-width {
     grid-column: span 1; /* Span one column in a two-column layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align to the left side */
     text-align: left; /* Left align text */
+    width: calc(50% - 10px); /* Reduce width to ensure spacing */
 }
 
 /* Responsive grid layout for larger screens */
@@ -72,7 +73,6 @@ main {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }
 
 /* Description styling */
