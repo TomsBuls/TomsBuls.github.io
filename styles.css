@@ -94,6 +94,7 @@ main {
     padding: 10px 0;
     border-top: 1px dotted #ddd;
     border-bottom: 1px dotted #ddd;
+    font-size: 0.9em;
 }
 
 /* Center text and elements within the project */
