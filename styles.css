@@ -28,6 +28,7 @@ main {
     padding: 20px;
 }
 
+/* About Me section */
 .about-me {
     background-color: #e0e0e0;
     padding: 20px;
@@ -35,6 +36,15 @@ main {
     margin-bottom: 20px;
 }
 
+.about-me h2 {
+    font-size: 1.2em; /* Adjust size for the section header */
+}
+
+.about-me p {
+    font-size: 0.9em; /* Smaller font size for paragraph text */
+}
+
+/* Projects section */
 .projects {
     display: grid;
     grid-template-columns: 1fr; /* Single column by default */
