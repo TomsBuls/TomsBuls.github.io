@@ -66,31 +66,20 @@ main {
     }
 
     .project.half-width {
-        margin-bottom: 0; /* Remove bottom margin */
+        width: 100%; /* Ensure full width within grid cell */
     }
 }
 
+/* Ensure projects do not overlap and maintain spacing */
 .project {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-    margin-bottom: 20px; /* Add margin to separate the projects */
-}
-
-/* Prevent overlap between half-width projects */
-.project.half-width {
+    margin-bottom: 20px; /* Ensure separation between projects */
     width: 100%;
-}
-
-.project.half-width:nth-of-type(2) {
-    margin-right: 20px; /* Space between the two half-width projects */
-}
-
-.project.half-width:nth-of-type(3) {
-    margin-right: 0; /* Remove margin for the last project */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 /* Description styling */
@@ -99,7 +88,7 @@ main {
     padding: 10px 0;
     border-top: 1px dotted #ddd;
     border-bottom: 1px dotted #ddd;
-    font-size: 0.7em; /* Adjust font size for the description */
+    font-size: 0.9em; /* Adjust font size for the description */
 }
 
 /* Center text and elements within the project */
