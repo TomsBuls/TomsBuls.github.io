@@ -41,20 +41,22 @@ main {
     gap: 20px;
 }
 
-/* Center content in full-width projects */
+/* Full-width project: Center content */
 .full-width {
     grid-column: 1 / -1; /* Span full width of the grid */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
 }
 
-/* Center content in half-width projects */
+/* Half-width projects: Align content to the left */
 .half-width {
     grid-column: span 1; /* Span one column in a two-column layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align to the left side */
+    text-align: left; /* Align text to the left */
 }
 
 /* Responsive grid layout for larger screens */
@@ -76,7 +78,6 @@ main {
 /* Center text and elements within the project */
 .project h3 {
     margin-bottom: 10px;
-    text-align: center;
 }
 
 .project ul {
@@ -94,7 +95,6 @@ main {
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
-    text-align: center;
 }
 
 .project a:hover {
