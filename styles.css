@@ -41,13 +41,13 @@ main {
     gap: 20px;
 }
 
-/* Full-width project: Center content */
+/* Full-width project: Left align content */
 .full-width {
     grid-column: 1 / -1; /* Span full width of the grid */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Center text */
+    align-items: flex-start; /* Align to the left side */
+    text-align: left; /* Left align text */
 }
 
 /* Half-width projects: Align content to the left */
@@ -56,7 +56,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align to the left side */
-    text-align: left; /* Align text to the left */
+    text-align: left; /* Left align text */
 }
 
 /* Responsive grid layout for larger screens */
@@ -102,7 +102,7 @@ main {
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
-    text-align: center;
+    text-align: left; /* Align text to the left */
 }
 
 .project a:hover {
