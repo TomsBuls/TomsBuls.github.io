@@ -64,6 +64,7 @@ main {
 @media (min-width: 768px) {
     .projects {
         grid-template-columns: repeat(2, 1fr); /* Two columns layout for larger screens */
+        gap: 20px; /* Add gap between the columns */
     }
 }
 
