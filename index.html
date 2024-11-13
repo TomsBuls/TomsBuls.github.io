@@ -34,10 +34,23 @@
             <div class="project half-width">
                 <h3>Project 2</h3>
                 <div class="description">
-                    <p>Brief description of Project 2.</p>
+                    <p>Here is the e-commerce analysis notebook where I used a variety of techniques to explore and analyze e-commerce data.</p>
+                </div>
+                <!-- Now, only one notebook link: e_commerce.html -->
+                <ul>
+                    <li><a href="projects/e-commerce/e_commerce.html">E-Commerce Notebook</a></li>
+                </ul>
+            </div>
+            <div class="project half-width">
+                <h3>Project 3</h3>
+                <div class="description">
+                    <p>Brief description of Project 3.</p>
                 </div>
                 <ul>
-                    <li><a href="e_commerce.html">E-Commerce Notebook</a></li> <!-- Updated link to your notebook -->
+                    <li><a href="#">Notebook 1</a></li>
+                    <li><a href="#">Notebook 2</a></li>
+                    <li><a href="#">Notebook 3</a></li>
+                    <li><a href="#">Notebook 4</a></li>
                 </ul>
             </div>
         </section>
@@ -45,35 +58,5 @@
     <footer>
         <p>&copy; 2024 TomsBuls</p>
     </footer>
-
-    <!-- JavaScript to Toggle Code Visibility -->
-    <script>
-        // Function to toggle code visibility
-        function toggleCode(cell) {
-            const codeCell = cell.parentElement.querySelector('.input');
-            if (codeCell.style.display === 'none') {
-                codeCell.style.display = 'block'; // Show the code
-            } else {
-                codeCell.style.display = 'none'; // Hide the code
-            }
-        }
-
-        // Add toggle buttons to each code cell
-        document.addEventListener("DOMContentLoaded", function() {
-            const codeCells = document.querySelectorAll('.code_cell'); // Select all code cells
-            codeCells.forEach(function(cell) {
-                const button = document.createElement('button'); // Create a button
-                button.classList.add('toggle-button'); // Add CSS class for styling
-                button.textContent = 'Toggle Code'; // Set button text
-                button.onclick = function() {
-                    toggleCode(cell); // Toggle code visibility on click
-                };
-                const promptElement = cell.querySelector('.prompt');
-                if (promptElement) {
-                    promptElement.insertBefore(button, promptElement.firstChild); // Add button above code
-                }
-            });
-        });
-    </script>
 </body>
 </html>
