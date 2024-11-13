@@ -132,24 +132,6 @@ main {
     border-bottom: 2px dotted #ddd;
 }
 
-/* Styling for the toggle button */
-.toggle-button {
-    cursor: pointer;
-    color: #007BFF;
-    text-decoration: underline;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-}
-
-.toggle-button:hover {
-    color: #0056b3;
-}
-
-/* Hide code cells by default */
-.input {
-    display: none; /* Initially hide the code cells */
-}
-
 footer {
     background: #444;
     color: #fff;
