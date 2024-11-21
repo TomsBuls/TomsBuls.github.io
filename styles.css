@@ -35,7 +35,7 @@ main {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
 }
 
 .project {
@@ -78,6 +78,17 @@ main {
     padding-right: 2%;
 }
 
+.project .links a {
+    display: block; /* Ensure links appear on separate lines */
+    margin-bottom: 5px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.project .links a:hover {
+    text-decoration: underline;
+}
+
 .project .image {
     width: 48%;
     display: flex;
@@ -86,8 +97,8 @@ main {
 }
 
 .project .image img {
-    max-width: 100%; /* Image scales proportionally */
-    max-height: 150px; /* Constrain height to fit the right section */
+    width: 100%; /* Fill the right side completely */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -101,14 +112,14 @@ main {
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 40px; /* Reduced spacing between projects and Power BI section */
+    margin-top: 40px; /* Adjusted spacing between projects and Power BI section */
 }
 
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 10px 0; /* Add white space for top and bottom */
+    margin: 20px 0; /* White margin top and bottom for Power BI */
 }
 
 /* Footer */
