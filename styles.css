@@ -99,8 +99,8 @@ main {
 }
 
 .project .image img {
-    max-width: 90%; /* Scales the image to fit right side */
-    max-height: 90%; /* Centers the image vertically */
+    max-width: 100%; /* Ensures image scales within the box width */
+    max-height: calc(100% - 20px); /* Matches the vertical line height */
     object-fit: contain; /* Ensures the image fits boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
