@@ -45,7 +45,7 @@ main {
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    min-height: 450px;
+    min-height: 350px; /* Reduced height */
 }
 
 .project.full-width {
