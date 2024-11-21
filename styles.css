@@ -122,6 +122,14 @@ main {
     margin-top: 60px;
 }
 
+.power-bi-project {
+    background-color: #fff; /* Add white background */
+    padding: 20px; /* Add padding to create margins */
+    border-radius: 8px; /* Optional rounded corners */
+    margin-bottom: 20px; /* Add space between Power BI boxes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
