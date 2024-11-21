@@ -35,14 +35,14 @@ main {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 30px; /* Add more spacing between projects */
 }
 
 .project {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 30px; /* Increased padding for additional vertical space */
+    padding: 40px; /* Increased padding for more vertical space */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -87,19 +87,13 @@ main {
 
 .horizontal {
     width: 100%;
-    margin: 15px 0; /* Increased spacing for visual balance */
+    margin: 20px 0; /* Ensure equal spacing for all dashed lines */
     border-top: 1px dashed #ddd;
 }
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 40px;
-}
-
-.power-bi-section h2 {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-top: 60px; /* More space between projects and dashboards */
 }
 
 .power-bi-project iframe {
