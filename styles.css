@@ -48,7 +48,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 350px; /* Ensures consistent box height */
+    min-height: 350px; /* Ensure consistent box height */
 }
 
 .project.full-width {
@@ -99,11 +99,12 @@ main {
 }
 
 .project .image img {
-    width: 100%; /* Scale to fill the right side width */
-    height: 100%; /* Adjust to match the height of the vertical line */
+    max-width: 90%; /* Ensure it doesn’t exceed the right side width */
+    max-height: 90%; /* Ensure the height aligns with the vertical line */
     object-fit: contain; /* Ensures the image respects boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Centers the image within the right side */
 }
 
 /* Horizontal Separator */
