@@ -42,9 +42,10 @@ main {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 60px; /* Increased vertical padding */
+    padding: 40px; /* Increased vertical padding */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    min-height: 400px; /* Ensures blocks are taller */
 }
 
 .project.full-width {
