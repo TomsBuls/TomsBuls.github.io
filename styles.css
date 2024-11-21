@@ -52,6 +52,44 @@ main {
     grid-column: span 2;
 }
 
+.project .content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.project .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: #aaa;
+    border-left: 1px dashed #aaa;
+}
+
+.project .text {
+    width: 48%;
+    padding-right: 2%;
+}
+
+.project .image {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project .image p {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-style: italic;
+}
+
 .project .description {
     margin: 10px 0;
     padding: 10px 0;
@@ -60,29 +98,19 @@ main {
     font-size: 0.9em;
 }
 
-.project ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.project ul li {
-    margin-bottom: 5px;
-}
-
-.project a {
+.project .links a {
     display: block;
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
 }
 
-.project a:hover {
+.project .links a:hover {
     text-decoration: underline;
 }
 
 .horizontal {
-    width: 100%;
+    width: 90%;
     margin: 20px 0;
     border-top: 1px dashed #ddd;
 }
