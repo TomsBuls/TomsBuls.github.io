@@ -1,199 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background: #444;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section.projects {
-            display: grid;
-            gap: 40px;
-        }
-
-        .project {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 400px; /* Ensure equal height */
-        }
-
-        .project .content {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .project .content h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .project .content p {
-            margin-bottom: 10px;
-        }
-
-        .project hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 10px 0;
-        }
-
-        .project .links {
-            margin-top: 10px;
-        }
-
-        .project .links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .project .links ul li {
-            margin-bottom: 5px;
-        }
-
-        .project .links a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .project .links a:hover {
-            text-decoration: underline;
-        }
-
-        .project .sneak-peek {
-            flex: 1;
-            text-align: center;
-            border-left: 1px dashed #ccc;
-            padding-left: 20px;
-        }
-
-        .project .sneak-peek img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        footer {
-            background: #444;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Welcome to my portfolio</h1>
     </header>
     <main>
+        <!-- About Me Section -->
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>
+                I started my career as an economist, but during my time at the Ministry of Economics, I shifted my focus towards data science, including working with machine learning techniques. Recently, I have collaborated closely with the Central Statistical Bureau on issues related to structuring, organizing, and retrieving personal data, as well as addressing privacy concerns and integrating various data sources.<br>
+                <strong>Skills:</strong> SQL (SQLite, PostgreSQL), Python (scikit-learn, BeautifulSoup, Tensorflow, Keras, PyTorch, HuggingFace), R, Stata, PowerBI, QlikSense.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
         <section class="projects">
-            <!-- BERT Project -->
-            <div class="project">
-                <div class="content">
-                    <h3>BERT: Sentiment Analysis of Latvian Tweets</h3>
-                    <hr>
-                    <p>
-                        This project explores sentiment analysis in Latvian-language tweets post the Autumn 2022 elections.
-                        It focuses on understanding public sentiment towards the government while addressing the linguistic
-                        challenges of Latvian. This includes creating datasets and fine-tuning models like BERT for semantic
-                        sentiment analysis.
-                    </p>
-                    <hr>
-                    <div class="links">
-                        <ul>
-                            <li><a href="projects/BERT_sentiment/Preprocessing.html">Data Preprocessing</a></li>
-                            <li><a href="projects/BERT_sentiment/Baseline_Classifiers.html">Baseline Classifiers</a></li>
-                            <li><a href="projects/BERT_sentiment/BERT_model.html">BERT Model</a></li>
-                            <li><a href="projects/BERT_sentiment/Visuals_for_metrics.html">Evaluation Metrics</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="project full-width">
+                <h3>BERT: Sentiment analysis of Latvian tweets post Autumn 2022 government elections</h3>
+                <hr>
+                <p>
+                    In today's digital era, understanding public sentiment towards the government is crucial for democratic accountability, effective policy-making, and maintaining strong government-citizen connections—especially in the wake of global events like the Covid-19 pandemic and geopolitical conflicts. This project focuses on the nuanced task of sentiment analysis in Latvian-language tweets, embarking on a mission to address a pronounced research gap. 
+                </p>
                 <div class="sneak-peek">
-                    <a href="projects/BERT_sentiment/BERT_model.html">
-                        <img src="projects/BERT_sentiment/sneak_peek.png" alt="BERT Sneak Peek">
+                    <a href="projects/BERT_sentiment/Visuals_for_metrics.html">
+                        <img src="images/BERT_highlight.png" alt="BERT Sentiment Project">
                     </a>
                 </div>
-            </div>
-
-            <!-- E-Commerce Project -->
-            <div class="project">
-                <div class="content">
-                    <h3>E-Commerce Analysis</h3>
-                    <hr>
-                    <p>
-                        This notebook analyzes e-commerce data, exploring key metrics like delivery time, distance efficiency,
-                        and cost ratios. The analysis includes geospatial visualizations to highlight logistical challenges
-                        and opportunities.
-                    </p>
-                    <hr>
-                    <div class="links">
-                        <ul>
-                            <li><a href="projects/e-commerce/e_commerce.html">E-Commerce Notebook</a></li>
-                        </ul>
-                    </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="projects/BERT_sentiment/Preprocessing.html">Data Preprocessing</a></li>
+                        <li><a href="projects/BERT_sentiment/Baseline_Classifiers.html">Baseline Classifiers</a></li>
+                        <li><a href="projects/BERT_sentiment/BERT_model.html">BERT Model</a></li>
+                        <li><a href="projects/BERT_sentiment/Visuals_for_metrics.html">Evaluation Metrics</a></li>
+                    </ul>
                 </div>
+            </div>
+            <div class="project half-width">
+                <h3>E-Commerce Analysis</h3>
+                <hr>
+                <p>
+                    This project explores e-commerce data, focusing on analyzing delivery performance, efficiency, and cost metrics. The notebook highlights opportunities to improve customer satisfaction and optimize operations.
+                </p>
                 <div class="sneak-peek">
                     <a href="projects/e-commerce/e_commerce.html">
-                        <img src="projects/e-commerce/sneak_peek.png" alt="E-Commerce Sneak Peek">
+                        <img src="images/ecommerce_highlight.png" alt="E-Commerce Analysis">
                     </a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="projects/e-commerce/e_commerce.html">E-Commerce Notebook</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Covid Project -->
-            <div class="project">
-                <div class="content">
-                    <h3>Covid-19 Analysis</h3>
-                    <hr>
-                    <p>
-                        This project analyzes Covid-19 data, focusing on trends in infection rates, vaccination coverage,
-                        and the pandemic's overall impact in Latvia. Key insights were derived using advanced visualization
-                        and data preprocessing techniques.
-                    </p>
-                    <hr>
-                    <div class="links">
-                        <ul>
-                            <li><a href="projects/covid/covid_final.html">Covid Latvia Analysis Notebook</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="project half-width">
+                <h3>Covid-19 Analysis</h3>
+                <hr>
+                <p>
+                    This project examines Covid-19 data, focusing on trends and insights regarding its impact on Latvia. The notebook includes forecasting models and data visualizations.
+                </p>
                 <div class="sneak-peek">
                     <a href="projects/covid/covid_final.html">
-                        <img src="projects/covid/sneak_peek.png" alt="Covid Sneak Peek">
+                        <img src="images/covid_highlight.png" alt="Covid-19 Analysis">
                     </a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="projects/covid/covid_final.html">Covid Analysis Notebook</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
+
+        <!-- Power BI Reports Section -->
+        <section class="powerbi-reports">
+            <h3>Power BI Reports</h3>
+            <div class="report">
+                <iframe title="11_11_prognozes_eng" src="https://app.powerbi.com/view?r=eyJrIjoiNGRhN2VhMzgtMGI1OC00OGU1LTkxMTQtNGU3MDU0OGRiM2FlIiwidCI6ImQ3NzZmZWE1LTdmOGYtNDQ0ZC1hYjRlLTVjZmZjMDg5OTVmMSIsImMiOjl9" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+            <div class="report">
+                <iframe title="Another Report" src="https://app.powerbi.com/view?r=eyJrIjoiYW5vdGhlci1hcGkta2V5IiwiZCI6ImFub3RoZXItYXBpLWRvbWFpbiIsImMiOjl9" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2024 TomsBuls</p>
     </footer>
