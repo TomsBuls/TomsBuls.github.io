@@ -85,8 +85,8 @@ main {
 }
 
 .project .image img {
-    max-width: 90%; /* Constrain image size */
-    height: auto;
+    max-width: 100%; /* Ensure the image fits within the right section */
+    max-height: 200px; /* Constrain height to ensure it fits */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
