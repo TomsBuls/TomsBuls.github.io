@@ -120,20 +120,23 @@ main {
 /* Power BI Section */
 .power-bi-section {
     margin-top: 60px;
+    padding: 20px 0; /* Add vertical spacing around the section */
+    background-color: #f4f4f4; /* Match the page background */
 }
 
 .power-bi-project {
-    background-color: #fff; /* Add white background */
-    padding: 20px; /* Add padding to create margins */
+    background-color: #fff; /* Set white background */
+    padding: 20px; /* Add padding inside the container */
     border-radius: 8px; /* Optional rounded corners */
-    margin-bottom: 20px; /* Add space between Power BI boxes */
+    margin: 20px 0; /* Add space between Power BI dashboards */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 }
 
 .power-bi-project iframe {
-    width: 100%;
+    width: 100%; /* Fill the container width */
     height: 600px;
     border: none;
+    display: block; /* Ensure no extra space below iframe */
 }
 
 /* Footer */
