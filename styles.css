@@ -45,7 +45,9 @@ main {
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    min-height: 350px; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .project.full-width {
@@ -56,6 +58,7 @@ main {
     display: flex;
     justify-content: space-between;
     position: relative;
+    width: 100%;
 }
 
 .project .content::before {
