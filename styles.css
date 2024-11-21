@@ -48,6 +48,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 300px; /* Ensure consistent height */
 }
 
 .project.full-width {
@@ -85,8 +86,8 @@ main {
 }
 
 .project .image img {
-    max-width: 100%; /* Ensure the image fits within the right section */
-    max-height: 200px; /* Constrain height to ensure it fits */
+    max-width: 100%; /* Image scales proportionally */
+    max-height: 150px; /* Constrain height to fit the right section */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -100,7 +101,7 @@ main {
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 40px;
+    margin-top: 40px; /* Reduced spacing between projects and Power BI section */
 }
 
 .power-bi-project iframe {
