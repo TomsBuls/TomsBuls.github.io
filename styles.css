@@ -100,7 +100,7 @@ main {
 
 .project .image img {
     max-width: 100%; /* Scale to fit the right side */
-    height: 100%; /* Matches the height of the vertical line */
+    max-height: 100%; /* Constrain to match the project box height */
     object-fit: contain; /* Ensures the image respects boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -118,11 +118,14 @@ main {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
 }
 
+.power-bi-project {
+    margin: 20px 0; /* Add top and bottom white margins */
+}
+
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 10px 0; /* White margin at top and bottom */
 }
 
 /* Footer */
