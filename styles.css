@@ -89,7 +89,7 @@ main {
     text-decoration: underline;
 }
 
-/* Adjusted image styling specifically for COVID chart */
+/* Image Styling with Hover Effect */
 .project .image {
     width: 48%;
     display: flex;
@@ -99,12 +99,19 @@ main {
 }
 
 .project .image img {
-    max-width: 90%; /* Ensure it doesn’t exceed the right side width */
-    max-height: 90%; /* Ensure the height aligns with the vertical line */
+    max-width: 90%; /* Scale to fit the right side */
+    max-height: 90%; /* Prevent overflow from the project box */
     object-fit: contain; /* Ensures the image respects boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: auto; /* Centers the image within the right side */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover Effect for Images */
+.project .image img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
 }
 
 /* Horizontal Separator */
