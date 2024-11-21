@@ -44,36 +44,13 @@ main {
     font-size: 0.9em;
 }
 
-/* Power BI Section */
-.power-bi-section {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.power-bi-section h2 {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.power-bi-project iframe {
-    width: 100%;
-    height: 600px;
-    border: none;
-    margin-bottom: 20px;
-}
-
-/* Project Section */
+/* Projects section */
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-/* Project Layout */
 .project {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -86,38 +63,9 @@ main {
     grid-column: span 2;
 }
 
-.project h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 0.9em;
-}
-
-.project ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-}
-
-.project ul li {
-    margin-bottom: 5px;
-}
-
-.project a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-
 .project .content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     position: relative;
 }
 
@@ -132,6 +80,10 @@ main {
     border-left: 1px dashed #aaa;
 }
 
+.project .text {
+    width: 55%;
+}
+
 .project .image {
     width: 35%;
     display: flex;
@@ -144,11 +96,21 @@ main {
     height: auto;
 }
 
-/* Horizontal dashed separator */
-hr.dashed {
+/* Power BI Section */
+.power-bi-section {
+    margin-top: 40px;
+}
+
+.power-bi-section h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.power-bi-project iframe {
+    width: 100%;
+    height: 600px;
     border: none;
-    border-top: 1px dashed #ccc;
-    margin: 10px 0;
 }
 
 /* Footer */
