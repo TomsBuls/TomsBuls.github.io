@@ -48,7 +48,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 300px; /* Ensure consistent height */
 }
 
 .project.full-width {
@@ -78,8 +77,40 @@ main {
     padding-right: 2%;
 }
 
+.project .image {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project .image .highlights {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+}
+
+.project .description {
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px dashed #ddd;
+    font-size: 0.9em;
+}
+
 .project .links a {
-    display: block; /* Ensures links appear on separate lines */
+    display: block;
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
@@ -89,23 +120,6 @@ main {
     text-decoration: underline;
 }
 
-.project .image {
-    width: 48%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensure the image fills the right side height */
-}
-
-.project .image img {
-    max-width: 100%; /* Scale to fit the right side */
-    max-height: 100%; /* Prevent overflow from the project box */
-    object-fit: contain; /* Ensures the image respects boundaries */
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Horizontal Separator */
 .horizontal {
     width: 90%;
     margin: 20px 0;
@@ -114,14 +128,21 @@ main {
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 20px; /* Reduced spacing between projects and Power BI */
+    margin-top: 30px; /* Reduced space above dashboards */
+}
+
+.power-bi-project {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 10px 0; /* White margin at top and bottom */
 }
 
 /* Footer */
