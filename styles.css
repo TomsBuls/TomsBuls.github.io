@@ -42,7 +42,7 @@ main {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px; /* Increased padding for additional vertical space */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -87,7 +87,7 @@ main {
 
 .horizontal {
     width: 100%;
-    margin: 10px 0;
+    margin: 15px 0; /* Increased spacing for visual balance */
     border-top: 1px dashed #ddd;
 }
 
