@@ -79,7 +79,7 @@ main {
 }
 
 .project .links a {
-    display: block; /* Ensure links appear on separate lines */
+    display: block; /* Ensures links appear on separate lines */
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
@@ -94,11 +94,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%; /* Ensure the image fills the right side height */
 }
 
 .project .image img {
-    width: 100%; /* Fill the right side completely */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Scale to fit the right side */
+    max-height: 100%; /* Prevent overflow from the project box */
+    object-fit: contain; /* Ensures the image respects boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -112,14 +114,14 @@ main {
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 40px; /* Adjusted spacing between projects and Power BI section */
+    margin-top: 20px; /* Reduced spacing between projects and Power BI */
 }
 
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 20px 0; /* White margin top and bottom for Power BI */
+    margin: 10px 0; /* White margin at top and bottom */
 }
 
 /* Footer */
