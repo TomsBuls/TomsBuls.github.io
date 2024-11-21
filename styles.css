@@ -65,8 +65,8 @@ main {
 .project .content::before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 10px;
+    bottom: 10px; /* Reduced the height slightly for better visual balance */
     left: 50%;
     width: 1px;
     background: #aaa;
@@ -100,7 +100,7 @@ main {
 
 .project .image img {
     max-width: 100%; /* Ensures image scales within the box width */
-    max-height: calc(100% - 20px); /* Matches the vertical line height */
+    max-height: 100%; /* Aligns with the project box height */
     object-fit: contain; /* Ensures the image fits boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -123,11 +123,18 @@ main {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
 }
 
+.power-bi-project {
+    margin: 20px 0; /* Added white margins around the Power BI reports */
+    background-color: #fff; /* Ensures a white background for the margins */
+    padding: 10px; /* Creates a visible margin effect */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 20px 0; /* White margins at top and bottom */
 }
 
 /* Footer */
