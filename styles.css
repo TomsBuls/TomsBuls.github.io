@@ -48,7 +48,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 300px; /* Ensures consistent box height */
+    min-height: 300px; /* Ensure consistent height */
 }
 
 .project.full-width {
@@ -65,8 +65,8 @@ main {
 .project .content::before {
     content: "";
     position: absolute;
-    top: 10px;
-    bottom: 10px; /* Reduced the height slightly for better visual balance */
+    top: 0;
+    bottom: 0;
     left: 50%;
     width: 1px;
     background: #aaa;
@@ -89,26 +89,21 @@ main {
     text-decoration: underline;
 }
 
+/* Adjusted image styling specifically for COVID chart */
 .project .image {
     width: 48%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Ensures the image fills the right side height */
-    overflow: hidden; /* Keeps image within bounds */
+    height: 100%; /* Ensure the image fills the right side height */
 }
 
 .project .image img {
-    max-width: 100%; /* Ensures image scales within the box width */
-    max-height: 100%; /* Aligns with the project box height */
-    object-fit: contain; /* Ensures the image fits boundaries */
+    max-width: 100%; /* Scale to fit the right side */
+    height: 100%; /* Matches the height of the vertical line */
+    object-fit: contain; /* Ensures the image respects boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease; /* Smooth hover effect */
-}
-
-.project .image img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Horizontal Separator */
@@ -123,18 +118,11 @@ main {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
 }
 
-.power-bi-project {
-    margin: 20px 0; /* Added white margins around the Power BI reports */
-    background-color: #fff; /* Ensures a white background for the margins */
-    padding: 10px; /* Creates a visible margin effect */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
     border: none;
+    margin: 10px 0; /* White margin at top and bottom */
 }
 
 /* Footer */
