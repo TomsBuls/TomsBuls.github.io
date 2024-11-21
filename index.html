@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to my portfolio</h1>
+        <h1>Welcome to my Portfolio</h1>
     </header>
     <main>
+        <!-- About Me Section -->
         <section class="about-me">
             <h2>About Me</h2>
             <p>
@@ -18,51 +19,66 @@
                 Skills: SQL (SQLite, PostgreSQL), Python (scikit-learn, BeautifulSoup, Tensorflow, Keras, PyTorch, HuggingFace), R, Stata, PowerBI, QlikSense.
             </p>
         </section>
+
+        <!-- Projects Section -->
         <section class="projects">
+            <!-- BERT Project -->
             <div class="project full-width">
-                <h3>BERT: Sentiment analysis of Latvian tweets post Autumn 2022 government elections</h3>
+                <h3>BERT: Sentiment Analysis of Latvian Tweets</h3>
+                <div class="horizontal"></div>
                 <div class="description">
-                    <p>In today's digital era, understanding public sentiment towards the government is crucial for democratic accountability...</p>
+                    <p>
+                        Understanding public sentiment towards the government is crucial for democratic accountability. This project focuses on analyzing Latvian tweets, exploring public opinions post the Autumn 2022 government elections. The research involves dataset curation and developing a semantic sentiment analysis model tailored for the Latvian language.
+                    </p>
                 </div>
+                <div class="horizontal"></div>
                 <ul>
                     <li><a href="projects/BERT_sentiment/Preprocessing.html">Data Preprocessing</a></li>
                     <li><a href="projects/BERT_sentiment/Baseline_Classifiers.html">Baseline Classifiers</a></li>
                     <li><a href="projects/BERT_sentiment/BERT_model.html">BERT Model</a></li>
                     <li><a href="projects/BERT_sentiment/Visuals_for_metrics.html">Evaluation Metrics</a></li>
                 </ul>
-                <!-- Add image placeholder -->
-                <div class="image-placeholder">
-                    <a href="projects/BERT_sentiment/Preprocessing.html">
-                        <img src="projects/BERT_sentiment/sentiment_tweets.png" alt="Sentiment Tweets Analysis Chart">
-                    </a>
-                </div>
             </div>
+
+            <!-- E-Commerce Analysis -->
             <div class="project half-width">
                 <h3>E-Commerce Analysis</h3>
+                <div class="horizontal"></div>
                 <div class="description">
-                    <p>Here is the e-commerce analysis notebook where I used a variety of techniques to explore and analyze e-commerce data.</p>
+                    <p>
+                        Here is the e-commerce analysis notebook where I used a variety of techniques to explore and analyze e-commerce data.
+                    </p>
                 </div>
+                <div class="horizontal"></div>
                 <ul>
                     <li><a href="projects/e-commerce/e_commerce.html">E-Commerce Notebook</a></li>
                 </ul>
             </div>
+
+            <!-- Covid-19 Analysis -->
             <div class="project half-width">
                 <h3>Covid-19 Analysis</h3>
+                <div class="horizontal"></div>
                 <div class="description">
-                    <p>This project explores Covid-19 data, focusing on analysis and insights regarding the pandemic's impact in various regions.</p>
+                    <p>
+                        This project explores Covid-19 data, focusing on analysis and insights regarding the pandemic's impact in various regions.
+                    </p>
                 </div>
+                <div class="horizontal"></div>
                 <ul>
                     <li><a href="projects/covid/covid_final.html">Covid Latvia Analysis Notebook</a></li>
                 </ul>
             </div>
         </section>
+
+        <!-- Power BI Section -->
         <section class="power-bi-section">
             <h2>Power BI Dashboards</h2>
             <div class="power-bi-project">
-                <iframe title="11_11_prognozes_eng" width="100%" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNGRhN2VhMzgtMGI1OC00OGU1LTkxMTQtNGU3MDU0OGRiM2FlIiwidCI6ImQ3NzZmZWE1LTdmOGYtNDQ0ZC1hYjRlLTVjZmZjMDg5OTVmMSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="11_11_prognozes_eng" src="https://app.powerbi.com/view?r=eyJrIjoiNGRhN2VhMzgtMGI1OC00OGU1LTkxMTQtNGU3MDU0OGRiM2FlIiwidCI6ImQ3NzZmZWE1LTdmOGYtNDQ0ZC1hYjRlLTVjZmZjMDg5OTVmMSIsImMiOjl9" allowFullScreen="true"></iframe>
             </div>
             <div class="power-bi-project">
-                <iframe title="Another Dashboard" width="100%" height="373.5" src="https://example.com" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="Another Power BI Dashboard" src="https://app.powerbi.com/view?r=YOUR_OTHER_IFRAME_LINK_HERE" allowFullScreen="true"></iframe>
             </div>
         </section>
     </main>
