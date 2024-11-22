@@ -99,11 +99,16 @@ main {
 }
 
 .project .image img {
-    max-width: 95%; /* Scales within the available width */
-    max-height: 95%; /* Scales within the available height */
+    max-width: 90%; /* Scales within the available width */
+    max-height: 90%; /* Scales within the available height */
     object-fit: contain; /* Maintains aspect ratio */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project .image img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
 }
 
 /* Horizontal Separator */
@@ -122,7 +127,7 @@ main {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 10px 0; /* White margin at top and bottom */
+    margin: 20px 0; /* Restored white margins at top and bottom */
 }
 
 /* Footer */
