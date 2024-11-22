@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden; /* Prevents horizontal scrollbars */
 }
 
 header {
@@ -46,9 +47,9 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
-    align-items: stretch;
+    align-items: stretch; /* Ensures both sides are equal height */
     justify-content: space-between;
-    min-height: 300px;
+    min-height: 300px; /* Ensures consistent height for project boxes */
 }
 
 .project.full-width {
@@ -79,7 +80,7 @@ main {
 }
 
 .project .links a {
-    display: block;
+    display: block; /* Ensures links appear on separate lines */
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
@@ -96,7 +97,6 @@ main {
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
     height: 100%; /* Fills the height of the project box */
-    position: relative;
 }
 
 .project .image img {
@@ -123,14 +123,14 @@ main {
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
-    padding: 20px;
-    background-color: #f4f4f4;
+    width: calc(100% - 80px); /* Matches the width of the project boxes */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Add padding to ensure consistent spacing */
+    background-color: #f9f9f9; /* Matches the page background */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: calc(100% - 80px); /* Matches the width of project boxes */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .power-bi-section h2 {
@@ -145,13 +145,15 @@ main {
 
 .power-bi-project {
     margin: 20px 0; /* Adds vertical white margins between reports */
+    text-align: center;
 }
 
 .power-bi-project iframe {
-    width: 100%; /* Matches the width of the section */
+    width: calc(100% - 40px); /* Ensures alignment with Power BI section */
     height: 600px;
     border: none;
-    margin: 10px 0; /* White margins at top and bottom */
+    margin: 10px auto; /* Adds white margins above and below */
+    display: block; /* Centers the iframe */
 }
 
 /* Footer */
