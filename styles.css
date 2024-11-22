@@ -117,10 +117,10 @@ section {
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
-    padding: 20px;
     background-color: #fcfcf2; /* Same light background as sections */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 5%; /* Adjusted padding for better alignment */
 }
 
 .power-bi-project {
@@ -130,7 +130,7 @@ section {
 }
 
 .power-bi-project iframe {
-    width: 95%; /* Matches the project boxes' width */
+    width: 90%; /* Matches the project boxes' width */
     height: 600px;
     border: none;
     margin: 10px 0; /* White margin at top and bottom */
