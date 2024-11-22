@@ -8,9 +8,9 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* Slightly lighter background for contrast */
     color: #333;
-    overflow-x: hidden; /* Prevents horizontal scrollbars */
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
 }
 
 header {
@@ -26,10 +26,11 @@ main {
 
 /* About Me Section */
 .about-me {
-    background-color: #e0e0e0;
+    background-color: #ffffff; /* White background for cleaner contrast */
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for structure */
 }
 
 /* Projects Section */
@@ -37,18 +38,18 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-bottom: 40px; /* Add spacing before the Power BI section */
+    margin-bottom: 40px; /* Spacing before Power BI section */
 }
 
 .project {
-    background-color: #fff;
+    background-color: #ffffff; /* White background for cleaner look */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for clarity */
     position: relative;
     display: flex;
-    align-items: stretch;
+    align-items: stretch; /* Ensures both sides are equal height */
     justify-content: space-between;
     min-height: 300px;
 }
@@ -95,23 +96,23 @@ main {
 .project .image {
     width: 48%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     height: 100%; /* Fills the height of the project box */
 }
 
 .project .image img {
-    max-width: 95%; /* Scales to fit within the space */
-    max-height: 95%; /* Ensures the image respects box boundaries */
+    max-width: 95%; /* Ensures image respects width boundaries */
+    max-height: 95%; /* Prevents overflow */
     object-fit: contain; /* Maintains aspect ratio */
-    margin: auto; /* Ensures horizontal centering */
+    margin: auto; /* Centers the image */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Smooth hover transition */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
 .project .image img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Horizontal Separator */
@@ -124,12 +125,12 @@ main {
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
-    width: 100%; /* Matches the width of the main container */
-    max-width: 1200px; /* Optional: set a max-width for consistency */
+    width: calc(100% - 80px); /* Matches the width of project boxes */
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px; /* Add padding to ensure consistent spacing */
-    background-color: #f9f9f9; /* Matches the page background */
+    padding: 20px; /* Add padding for consistent spacing */
+    background-color: #fcfcfc; /* Slightly off-white for structure */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -138,10 +139,10 @@ main {
 .power-bi-section h2 {
     margin: 0 0 10px;
     padding: 10px;
-    background-color: #e8e8e8;
+    background-color: #f7f7f7;
     border-bottom: 1px solid #ccc;
     text-align: center;
-    color: #555;
+    color: #333;
     font-size: 1.5em;
 }
 
@@ -151,11 +152,11 @@ main {
 }
 
 .power-bi-project iframe {
-    width: calc(100% - 80px); /* Matches project boxes */
-    max-width: 100%; /* Ensures it doesn't exceed parent container */
+    width: calc(100% - 40px); /* Matches project box width */
+    max-width: 100%; /* Ensures it doesn't exceed container */
     height: 600px;
     border: none;
-    margin: 10px 40px; /* Adds white margins around the iframe */
+    margin: 10px auto; /* Adds white margins at the top and bottom */
     display: block; /* Centers the iframe */
 }
 
