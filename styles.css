@@ -48,7 +48,7 @@ main {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    min-height: 300px; /* Ensures consistent height for project boxes */
+    min-height: 300px;
 }
 
 .project.full-width {
@@ -79,7 +79,7 @@ main {
 }
 
 .project .links a {
-    display: block; /* Ensures links appear on separate lines */
+    display: block;
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
@@ -89,28 +89,25 @@ main {
     text-decoration: underline;
 }
 
-/* Image Styling */
 .project .image {
     width: 48%;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 100%; /* Fills the height of the project box */
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .project .image img {
-    max-width: 90%; /* Scales within the available width */
-    max-height: 90%; /* Prevents the image from exceeding the box size */
-    object-fit: contain; /* Maintains aspect ratio */
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    margin: auto; /* Ensures horizontal centering within the available space */
 }
 
 .project .image img:hover {
-    transform: scale(1.05); /* Adds hover effect */
+    transform: scale(1.05);
 }
 
 /* Horizontal Separator */
@@ -134,13 +131,8 @@ main {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 10px 0; /* White margin at top and bottom */
-}
-
-/* Footer */
-footer {
-    background: #444;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    display: block;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
 }
