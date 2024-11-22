@@ -99,19 +99,18 @@ main {
 }
 
 .project .image img {
-    max-width: 90%; /* Scale to fit the right side */
-    max-height: 90%; /* Prevent overflow from the project box */
+    max-width: 100%; /* Scale to fit the right side */
+    max-height: 100%; /* Prevent overflow from the project box */
     object-fit: contain; /* Ensures the image respects boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Centers the image within the right side */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
 }
 
 /* Hover Effect for Images */
 .project .image img:hover {
     transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
 }
 
 /* Horizontal Separator */
