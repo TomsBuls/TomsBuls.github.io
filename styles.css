@@ -93,18 +93,19 @@ main {
 .project .image {
     width: 48%;
     display: flex;
-    align-items: center; /* Vertically centers the image */
     justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
     height: 100%; /* Fills the height of the project box */
 }
 
 .project .image img {
-    max-width: 90%; /* Scales within the available width */
+    max-width: 95%; /* Scales within the available width */
     max-height: 95%; /* Scales within the available height */
     object-fit: contain; /* Maintains aspect ratio */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Centers the image horizontally and vertically */
+    margin-left: auto; /* Adjusts spacing to center image within the right box */
+    margin-right: auto;
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
@@ -121,14 +122,16 @@ main {
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 30px; /* Slightly increased margin for better spacing */
+    margin-top: 20px; /* Reduced spacing between projects and Power BI */
+    padding: 10px 0; /* Adds top and bottom white space */
+    background-color: #f9f9f9; /* Adds a light background to separate section */
 }
 
 .power-bi-project iframe {
     width: 100%;
     height: 600px;
     border: none;
-    margin: 20px 0; /* Restored white margin at top and bottom */
+    margin: 10px 0; /* White margin at top and bottom */
 }
 
 /* Footer */
