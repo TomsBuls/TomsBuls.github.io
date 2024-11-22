@@ -46,9 +46,9 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
-    align-items: stretch; /* Ensures both sides are equal height */
+    align-items: stretch;
     justify-content: space-between;
-    min-height: 300px; /* Ensures consistent height for project boxes */
+    min-height: 300px;
 }
 
 .project.full-width {
@@ -79,7 +79,7 @@ main {
 }
 
 .project .links a {
-    display: block; /* Ensures links appear on separate lines */
+    display: block;
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
@@ -100,12 +100,17 @@ main {
 }
 
 .project .image img {
-    max-width: 95%; /* Scales within the available width */
-    max-height: 95%; /* Prevents the image from exceeding the box size */
+    max-width: 95%; /* Scales to fit within the space */
+    max-height: 95%; /* Ensures the image respects box boundaries */
     object-fit: contain; /* Maintains aspect ratio */
+    margin: auto; /* Ensures horizontal centering */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Ensures horizontal centering within the available space */
+    transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+.project .image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Horizontal Separator */
@@ -117,13 +122,15 @@ main {
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 10px; /* Reduced spacing between projects and Power BI */
+    margin-top: 20px; /* Reduced spacing between projects and Power BI */
     padding: 20px;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: calc(100% - 80px); /* Matches the width of project boxes */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .power-bi-section h2 {
@@ -141,10 +148,10 @@ main {
 }
 
 .power-bi-project iframe {
-    width: calc(100% - 40px); /* Aligns with project boxes, includes white margins */
+    width: 100%; /* Matches the width of the section */
     height: 600px;
     border: none;
-    margin: 20px; /* Adds white margin around the iframe */
+    margin: 10px 0; /* White margins at top and bottom */
 }
 
 /* Footer */
