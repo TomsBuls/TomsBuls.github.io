@@ -46,7 +46,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
-    align-items: stretch; /* Ensures equal height on both sides */
+    align-items: stretch; /* Ensures both sides are equal height */
     justify-content: space-between;
     min-height: 300px; /* Ensures consistent height for project boxes */
 }
@@ -93,18 +93,17 @@ main {
 .project .image {
     width: 48%;
     display: flex;
-    justify-content: center; /* Centers image horizontally */
-    align-items: center; /* Centers image vertically */
+    align-items: center; /* Vertically centers the image */
+    justify-content: center; /* Horizontally centers the image */
     height: 100%; /* Fills the height of the project box */
 }
 
 .project .image img {
-    max-width: 95%; /* Scales image width */
-    max-height: 95%; /* Scales image height */
-    object-fit: contain; /* Ensures image fits within the box */
+    max-width: 95%; /* Scales within the available width */
+    max-height: 95%; /* Scales within the available height */
+    object-fit: contain; /* Maintains aspect ratio */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Ensures full centering of image */
 }
 
 /* Horizontal Separator */
