@@ -37,6 +37,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    margin-bottom: 40px; /* Add spacing before the Power BI section */
 }
 
 .project {
@@ -47,9 +48,9 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
-    align-items: stretch; /* Ensures both sides are equal height */
+    align-items: stretch;
     justify-content: space-between;
-    min-height: 300px; /* Ensures consistent height for project boxes */
+    min-height: 300px;
 }
 
 .project.full-width {
@@ -94,8 +95,8 @@ main {
 .project .image {
     width: 48%;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
+    justify-content: center;
+    align-items: center;
     height: 100%; /* Fills the height of the project box */
 }
 
@@ -123,7 +124,8 @@ main {
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
-    width: calc(100% - 80px); /* Matches the width of the project boxes */
+    width: 100%; /* Matches the width of the main container */
+    max-width: 1200px; /* Optional: set a max-width for consistency */
     margin-left: auto;
     margin-right: auto;
     padding: 20px; /* Add padding to ensure consistent spacing */
@@ -149,10 +151,11 @@ main {
 }
 
 .power-bi-project iframe {
-    width: 100%; /* Ensures alignment with Power BI section */
+    width: calc(100% - 80px); /* Matches project boxes */
+    max-width: 100%; /* Ensures it doesn't exceed parent container */
     height: 600px;
     border: none;
-    margin: 10px 0; /* White margin at top and bottom */
+    margin: 10px 40px; /* Adds white margins around the iframe */
     display: block; /* Centers the iframe */
 }
 
