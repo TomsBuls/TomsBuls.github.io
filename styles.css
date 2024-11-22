@@ -8,36 +8,27 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Very light grey for contrast with sections */
     color: #333;
 }
 
 /* Header Section */
 header {
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     padding: 20px;
     text-align: left;
     border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-}
-
-.about-me {
-    background-color: #ffffff; /* Matches header background */
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 0 auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Section Styles */
 section {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Pure white background */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    margin-bottom: 30px; /* Space between sections */
     padding: 20px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #eaeaea; /* Subtle border for structure visibility */
 }
 
 /* Projects Section */
@@ -52,7 +43,7 @@ section {
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     position: relative;
     display: flex;
     align-items: stretch;
@@ -78,7 +69,7 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #eaeaea;
+    background: #eaeaea; /* Matches the border color */
     border-left: 1px dashed #eaeaea;
 }
 
@@ -102,8 +93,8 @@ section {
 .project .image {
     width: 48%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertically centers the image */
+    justify-content: center; /* Horizontally centers the image */
     height: 100%;
 }
 
@@ -148,7 +139,7 @@ section {
 /* Footer */
 footer {
     background: #ffffff;
-    color: #333;
+    color: #444;
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #eaeaea;
