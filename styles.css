@@ -149,10 +149,10 @@ main {
 }
 
 .power-bi-project iframe {
-    width: calc(100% - 40px); /* Ensures alignment with Power BI section */
+    width: 100%; /* Ensures alignment with Power BI section */
     height: 600px;
     border: none;
-    margin: 10px auto; /* Adds white margins above and below */
+    margin: 10px 0; /* White margin at top and bottom */
     display: block; /* Centers the iframe */
 }
 
