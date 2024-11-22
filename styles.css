@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Slightly lighter background */
+    background-color: #f9f9f9; /* Very light grey for contrast with sections */
     color: #333;
 }
 
@@ -25,11 +25,12 @@ main {
 
 /* Section Styles */
 section {
-    background-color: #fcfcf2; /* Very light white/yellowish background */
+    background-color: #ffffff; /* Pure white background */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for form differentiation */
     margin-bottom: 30px; /* Space between sections */
     padding: 20px;
+    border: 1px solid #eaeaea; /* Subtle border for structure visibility */
 }
 
 /* Projects Section */
@@ -40,16 +41,16 @@ section {
 }
 
 .project {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ffffff; /* Matches section background */
+    border: 1px solid #eaeaea; /* Subtle border */
     border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     position: relative;
     display: flex;
     align-items: stretch; /* Ensures both sides are equal height */
     justify-content: space-between;
-    min-height: 300px; /* Ensures consistent height for project boxes */
+    min-height: 300px; /* Consistent height for project boxes */
 }
 
 .project.full-width {
@@ -70,8 +71,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #aaa;
-    border-left: 1px dashed #aaa;
+    background: #eaeaea; /* Matches the border color */
+    border-left: 1px dashed #eaeaea;
 }
 
 .project .text {
@@ -80,7 +81,7 @@ section {
 }
 
 .project .links a {
-    display: block; /* Ensures links appear on separate lines */
+    display: block; /* Links on separate lines */
     margin-bottom: 5px;
     color: #007BFF;
     text-decoration: none;
@@ -96,7 +97,7 @@ section {
     display: flex;
     align-items: center; /* Vertically centers the image */
     justify-content: center; /* Horizontally centers the image */
-    height: 100%; /* Fills the height of the project box */
+    height: 100%; /* Matches the height of the project box */
 }
 
 .project .image img {
@@ -104,23 +105,29 @@ section {
     max-height: 95%; /* Prevents overflow */
     object-fit: contain; /* Maintains aspect ratio */
     border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for differentiation */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.project .image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Horizontal Separator */
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #ddd;
+    border-top: 1px dashed #eaeaea; /* Matches subtle form */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px; /* Reduced spacing between projects and Power BI */
-    background-color: #fcfcf2; /* Same light background as sections */
+    padding: 20px;
+    background-color: #ffffff; /* Matches section background */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px 5%; /* Adjusted padding for better alignment */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for form differentiation */
+    border: 1px solid #eaeaea;
 }
 
 .power-bi-project {
@@ -130,7 +137,7 @@ section {
 }
 
 .power-bi-project iframe {
-    width: 90%; /* Matches the project boxes' width */
+    width: 95%; /* Matches the project boxes' width */
     height: 600px;
     border: none;
     margin: 10px 0; /* White margin at top and bottom */
