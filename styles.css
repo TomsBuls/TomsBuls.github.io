@@ -100,11 +100,12 @@ main {
 
 .project .image img {
     max-width: 90%; /* Scales within the available width */
-    max-height: 90%; /* Scales within the available height */
+    max-height: 95%; /* Scales within the available height */
     object-fit: contain; /* Maintains aspect ratio */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    margin: auto; /* Centers the image within the right-side box */
 }
 
 .project .image img:hover {
