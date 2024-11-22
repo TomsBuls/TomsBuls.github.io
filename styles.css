@@ -89,26 +89,21 @@ main {
     text-decoration: underline;
 }
 
-/* Image Styling with Hover Effect */
+/* Image Styling */
 .project .image {
     width: 48%;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100%; /* Ensure the image fills the right side height */
+    align-items: center; /* Vertically center the image */
+    justify-content: flex-start; /* Align image to the top of its space */
+    height: 100%; /* Ensure image fills the height of the project box */
 }
 
 .project .image img {
-    max-width: 100%; /* Scale to fit the right side */
-    max-height: 100%; /* Prevent overflow from the project box */
-    object-fit: contain; /* Ensures the image respects boundaries */
+    max-width: 100%; /* Ensure the image stays within the right side */
+    max-height: 100%; /* Prevent overflow beyond the project box */
+    object-fit: contain; /* Maintain aspect ratio within boundaries */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Hover transition */
-}
-
-.project .image img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Horizontal Separator */
