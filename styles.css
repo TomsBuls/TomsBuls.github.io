@@ -46,7 +46,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
-    align-items: stretch; /* Ensures both sides are equal height */
+    align-items: stretch;
     justify-content: space-between;
     min-height: 300px; /* Ensures consistent height for project boxes */
 }
@@ -100,11 +100,11 @@ main {
 
 .project .image img {
     max-width: 90%; /* Scales within the available width */
-    max-height: 95%; /* Scales within the available height */
+    max-height: 90%; /* Scales within the available height */
     object-fit: contain; /* Maintains aspect ratio */
+    margin: auto; /* Ensures proper centering */
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Ensures horizontal and vertical centering */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
@@ -121,16 +121,17 @@ main {
 
 /* Power BI Section */
 .power-bi-section {
-    margin-top: 20px; /* Reduced spacing between projects and Power BI */
-    padding: 10px 0; /* Adds top and bottom white space */
-    background-color: #f9f9f9; /* Adds a light background to separate section */
+    margin-top: 20px;
+    padding: 20px 0; /* Added padding to create a white margin effect */
+    background-color: #f9f9f9;
 }
 
 .power-bi-project iframe {
-    width: 100%;
+    width: 98%; /* Slightly smaller width for white margins */
     height: 600px;
     border: none;
-    margin: 20px 0; /* White margin at top and bottom */
+    margin: 10px auto; /* Adds top and bottom white space */
+    display: block; /* Centers iframe horizontally */
 }
 
 /* Footer */
