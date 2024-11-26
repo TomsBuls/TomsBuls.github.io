@@ -12,6 +12,13 @@ body {
     color: #333;
 }
 
+/* Outer Container */
+.outer-container {
+    max-width: 1200px; /* Maximum width for container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add left and right margins for spacing */
+}
+
 /* Header Section */
 header {
     background-color: #ffffff;
@@ -55,72 +62,10 @@ section {
     grid-column: span 2;
 }
 
-.project .content {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-}
-
-.project .content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    background: #eaeaea; /* Matches the border color */
-    border-left: 1px dashed #eaeaea;
-}
-
-.project .text {
-    width: 48%;
-    padding-right: 2%;
-}
-
-.project .links a {
-    display: block;
-    margin-bottom: 5px;
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.project .links a:hover {
-    text-decoration: underline;
-}
-
-/* Image Styling */
-.project .image {
-    width: 48%;
-    display: flex;
-    align-items: center; /* Vertically centers the image */
-    justify-content: center; /* Horizontally centers the image */
-    height: 100%;
-}
-
-.project .image img {
-    max-width: 95%;
-    max-height: 95%;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Horizontal Separator */
-.horizontal {
-    width: 90%;
-    margin: 20px 0;
-    border-top: 1px dashed #eaeaea;
-}
-
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eaeaea;
 }
 
 .power-bi-project {
@@ -130,17 +75,7 @@ section {
 }
 
 .power-bi-project iframe {
-    width: 95%;
+    width: 100%;
     height: 600px;
     border: none;
-    margin: 10px 0;
-}
-
-/* Footer */
-footer {
-    background: #ffffff;
-    color: #444;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #eaeaea;
 }
