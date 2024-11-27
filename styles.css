@@ -102,6 +102,14 @@ section {
     text-decoration: underline;
 }
 
+/* Description Font Size */
+.project .description p,
+.power-bi-description {
+    font-size: 0.8em; /* Smaller font size for descriptions */
+    line-height: 1.4;
+    color: #555; /* Softer color for readability */
+}
+
 /* Image Styling */
 .project .image {
     width: 48%;
@@ -156,13 +164,6 @@ section {
     margin-bottom: 10px;
     font-size: 1.5em;
     font-weight: bold;
-}
-
-.power-bi-description {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 0.8em; /* Reduced font size for descriptions */
-    color: #555;
 }
 
 .power-bi-dashboard iframe {
