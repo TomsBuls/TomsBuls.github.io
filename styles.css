@@ -104,10 +104,11 @@ section {
 
 /* Description Font Size */
 .project .description p,
-.power-bi-description {
-    font-size: 0.8em; /* Smaller font size for descriptions */
-    line-height: 1.4;
+.power-bi-dashboard p {
+    font-size: 0.7em; /* Reduced font size for smaller appearance */
+    line-height: 1.3; /* Slightly reduced line height for compact look */
     color: #555; /* Softer color for readability */
+    margin: 0 0 10px; /* Add spacing below for clarity */
 }
 
 /* Image Styling */
