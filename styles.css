@@ -27,11 +27,10 @@ header {
     border-bottom: 1px solid #eaeaea;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border-radius: 8px; /* Match other sections' styling */
-    margin-bottom: 30px; /* Space between About Me and Projects */
+    margin: 20px auto 30px; /* Added 20px top margin */
     max-width: 1200px; /* Match width of main section */
-    margin-left: auto;
-    margin-right: auto;
 }
+
 
 /* Section Styles */
 section {
