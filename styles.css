@@ -65,7 +65,7 @@ section {
 
 .project.full-width {
     grid-column: span 2;
-}
+} 
 
 .project .content {
     display: flex;
