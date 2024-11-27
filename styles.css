@@ -22,7 +22,7 @@ main {
 /* Header Section - About Me */
 header {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 30px; /* Adjusted for additional top margin */
     text-align: left;
     border-bottom: 1px solid #eaeaea;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -147,15 +147,27 @@ section {
     margin-right: auto;
 }
 
-.power-bi-project {
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
+.power-bi-dashboard {
+    margin-bottom: 30px;
 }
 
-.power-bi-project iframe {
-    width: 95%;
-    height: 600px;
+.power-bi-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.power-bi-description {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+.power-bi-dashboard iframe {
+    width: 100%; /* Maintain full size */
+    height: 600px; /* Ensure consistent visual size */
     border: none;
     margin: 10px 0;
 }
