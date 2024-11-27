@@ -102,14 +102,15 @@ section {
     text-decoration: underline;
 }
 
-/* Description Font Size */
+/* Unified Description Font Size */
 .project .description p,
-.power-bi-dashboard p {
-    font-size: 0.7em; /* Reduced font size for smaller appearance */
-    line-height: 1.3; /* Slightly reduced line height for compact look */
-    color: #555; /* Softer color for readability */
-    margin: 0 0 10px; /* Add spacing below for clarity */
+.power-bi-dashboard > p {
+    font-size: 0.8em; /* Match project descriptions */
+    line-height: 1.4; /* Consistent spacing */
+    color: #555; /* Softer text for readability */
+    margin: 0 0 10px; /* Add some space below */
 }
+
 
 /* Image Styling */
 .project .image {
