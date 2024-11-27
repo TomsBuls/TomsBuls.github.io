@@ -19,7 +19,7 @@ main {
     padding: 0 20px; /* Add a small padding for spacing on smaller screens */
 }
 
-/* Header Section */
+/* Header Section - About Me */
 header {
     background-color: #ffffff;
     padding: 20px;
@@ -28,7 +28,9 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border-radius: 8px; /* Match other sections' styling */
     margin-bottom: 30px; /* Space between About Me and Projects */
-    max-width: 100%; /* Keep it responsive */
+    max-width: 95%; /* Match width of main section and prevent stretching */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Section Styles */
@@ -39,16 +41,6 @@ section {
     margin-bottom: 30px; /* Space between sections */
     padding: 20px;
     border: 1px solid #eaeaea; /* Subtle border for structure visibility */
-}
-
-/* About Me Section */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 700px; /* Match the width of smaller project boxes */
-    margin: 0 auto 30px auto; /* Center the About Me section and add spacing */
-    text-align: center;
 }
 
 /* Projects Section */
@@ -118,7 +110,7 @@ header {
     justify-content: center; /* Horizontally centers the image */
     height: 100%;
     overflow: hidden; /* Prevents any image overflow */
-    transition: transform 0.3s ease; /* Add zoom effect */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animations */
 }
 
 .project .image img {
@@ -127,10 +119,12 @@ header {
     object-fit: contain;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling */
 }
 
 .project .image:hover img {
-    transform: scale(1.1); /* Zoom in effect */
+    transform: scale(1.1) translateY(-5px); /* Slight zoom and upward movement */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* Horizontal Separator */
