@@ -161,7 +161,7 @@ section {
 .power-bi-description {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1em;
+    font-size: 0.8em; /* Reduced font size for descriptions */
     color: #555;
 }
 
