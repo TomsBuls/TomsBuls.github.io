@@ -28,7 +28,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border-radius: 8px; /* Match other sections' styling */
     margin-bottom: 30px; /* Space between About Me and Projects */
-    max-width: 95%; /* Match width of main section and prevent stretching */
+    max-width: 1200px; /* Match width of main section */
     margin-left: auto;
     margin-right: auto;
 }
@@ -142,6 +142,9 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #eaeaea;
+    max-width: 1200px; /* Ensure alignment with other sections */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .power-bi-project {
