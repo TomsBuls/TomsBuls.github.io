@@ -22,15 +22,14 @@ main {
 /* Header Section - About Me */
 header {
     background-color: #ffffff;
-    padding: 30px; /* Adjusted for additional top margin */
+    padding: 30px;
     text-align: left;
     border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 8px; /* Match other sections' styling */
-    margin: 20px auto 30px; /* Added 20px top margin */
-    max-width: 1200px; /* Match width of main section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto 30px; /* 20px top margin added here */
+    max-width: 1200px;
 }
-
 
 /* Section Styles */
 section {
