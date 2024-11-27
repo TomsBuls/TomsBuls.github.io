@@ -12,16 +12,15 @@ body {
     color: #333;
 }
 
-/* Main Content Wrapper */
+/* Main Container */
 main {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Header Section - About Me */
+/* Header Section */
 header {
-    margin-top: 30px;
     background-color: #ffffff;
     padding: 20px;
     text-align: left;
@@ -49,14 +48,10 @@ section {
 }
 
 .project {
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
     min-height: 300px;
     overflow: hidden;
 }
@@ -65,104 +60,23 @@ section {
     grid-column: span 2;
 }
 
-.project .content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.project .content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    background: #eaeaea;
-    border-left: 1px dashed #eaeaea;
-}
-
-.project .text {
-    width: 48%;
-    padding-right: 2%;
-}
-
-.project .links a {
-    display: block;
-    margin-bottom: 5px;
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.project .links a:hover {
-    text-decoration: underline;
-}
-
-/* Image Styling */
-.project .image {
-    width: 48%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project .image img {
-    max-width: 95%;
-    max-height: 95%;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project .image:hover img {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Horizontal Separator */
-.horizontal {
-    width: 90%;
-    margin: 20px 0;
-    border-top: 1px dashed #eaeaea;
-}
-
 /* Power BI Section */
-.power-bi-section {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eaeaea;
-}
-
-/* Power BI Titles and Descriptions */
-.power-bi-report {
+.power-bi-section h3 {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.power-bi-report h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.power-bi-report p {
-    margin-bottom: 15px;
-    color: #555;
-}
-
-/* Footer */
-footer {
-    background: #ffffff;
-    color: #444;
+.power-bi-dashboard p {
     text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #eaeaea;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.power-bi-dashboard iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
 }
