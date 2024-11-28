@@ -27,8 +27,9 @@ header {
     border-bottom: 1px solid #eaeaea;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 20px auto 30px; /* 20px top margin added here */
+    margin: 30px auto; /* Matches the project section margins */
     max-width: 1200px;
+    border: 1px solid #eaeaea; /* Adds consistency with the project sections */
 }
 
 /* Section Styles */
