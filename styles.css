@@ -8,8 +8,9 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Very light grey for contrast with sections */
+    background-color: #f4f6f8; /* Light greyish-blue background for outside */
     color: #333;
+    padding: 20px 0; /* Adds spacing around the content sections */
 }
 
 /* Main Content Wrapper */
@@ -21,22 +22,22 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Keeps About Me section white */
     padding: 30px;
     text-align: left;
     border-bottom: 1px solid #eaeaea;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 30px auto; /* Matches the project section margins */
+    margin: 30px auto; /* Matches the section margins */
     max-width: 1200px;
-    border: 1px solid #eaeaea; /* Adds consistency with the project sections */
+    border: 1px solid #eaeaea; /* Adds consistency with project sections */
 }
 
 /* Section Styles */
 section {
-    background-color: #ffffff; /* Pure white background */
+    background-color: #ffffff; /* Keeps all sections white */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Adds subtle shadow */
     margin-bottom: 30px; /* Space between sections */
     padding: 20px;
     border: 1px solid #eaeaea; /* Subtle border for structure visibility */
@@ -110,7 +111,6 @@ section {
     margin: 0 0 10px; /* Add some space below */
 }
 
-
 /* Image Styling */
 .project .image {
     width: 48%;
@@ -176,9 +176,15 @@ section {
 
 /* Footer */
 footer {
-    background: #ffffff;
+    background: #ffffff; /* Keeps footer white */
     color: #444;
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #eaeaea;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
