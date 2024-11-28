@@ -31,26 +31,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #4A5A5E; /* Lighter Grey-Teal */
+    background-color: #7D8E95; /* Twice lighter grey-teal */
     color: #ffffff; /* White text for contrast */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #7D8E95;
+    border-bottom: 1px solid #A1B0B5; /* Subtle lighter border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 30px auto;
     max-width: 1200px;
-    border: 1px solid #7D8E95;
+    border: 1px solid #A1B0B5;
 }
 
 /* Section Styles */
 section {
-    background-color: rgba(255, 187, 152, 0.7); /* Light peachy-orange with transparency */
+    background-color: rgba(255, 187, 152, 0.2); /* Very light peachy-orange */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #FFBB98;
+    border: 1px solid rgba(255, 187, 152, 0.4); /* Slightly darker border for definition */
 }
 
 /* Projects Section */
@@ -61,8 +61,8 @@ section {
 }
 
 .project {
-    background-color: rgba(255, 187, 152, 0.7); /* Same light peachy-orange with transparency */
-    border: 1px solid #FFBB98;
+    background-color: rgba(255, 187, 152, 0.2); /* Very light peachy-orange */
+    border: 1px solid rgba(255, 187, 152, 0.4); /* Slightly darker border for definition */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -92,8 +92,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #FFBB98;
-    border-left: 1px dashed #FFBB98;
+    background: rgba(255, 187, 152, 0.4); /* Matches borders */
+    border-left: 1px dashed rgba(255, 187, 152, 0.4);
 }
 
 .project .text {
@@ -150,17 +150,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #7D8E95;
+    border-top: 1px dashed #A1B0B5; /* Matches lighter border tones */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(255, 187, 152, 0.7); /* Matches project boxes */
+    background-color: rgba(255, 187, 152, 0.2); /* Matches project boxes */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #FFBB98;
+    border: 1px solid rgba(255, 187, 152, 0.4); /* Slightly darker border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
