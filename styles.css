@@ -31,7 +31,7 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #344648; /* Dark Gray-Teal */
+    background-color: #4A5A5E; /* Lighter Grey-Teal */
     color: #ffffff; /* White text for contrast */
     padding: 30px;
     text-align: left;
@@ -45,17 +45,12 @@ header {
 
 /* Section Styles */
 section {
-    background-color: #FBE0C3; /* Peach */
+    background-color: rgba(255, 187, 152, 0.7); /* Light peachy-orange with transparency */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #FFBB98; /* Salmon border */
-}
-
-.projects section {
-    background-color: #FFBB98; /* Salmon */
-    border: 1px solid #7D8E95; /* Gray-Blue border */
+    border: 1px solid #FFBB98;
 }
 
 /* Projects Section */
@@ -66,7 +61,7 @@ section {
 }
 
 .project {
-    background-color: #FBE0C3; /* Peach */
+    background-color: rgba(255, 187, 152, 0.7); /* Same light peachy-orange with transparency */
     border: 1px solid #FFBB98;
     border-radius: 8px;
     padding: 40px;
@@ -97,7 +92,7 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #FFBB98; /* Matches borders */
+    background: #FFBB98;
     border-left: 1px dashed #FFBB98;
 }
 
@@ -155,17 +150,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #7D8E95; /* Matches Gray-Blue */
+    border-top: 1px dashed #7D8E95;
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #7D8E95; /* Gray-Blue */
+    background-color: rgba(255, 187, 152, 0.7); /* Matches project boxes */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #344648;
+    border: 1px solid #FFBB98;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
