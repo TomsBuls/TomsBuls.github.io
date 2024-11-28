@@ -162,10 +162,10 @@ section {
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #7D8E95; /* Gray-Blue */
+    background-color: #FBE0C3; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #344648;
+    border: 1px solid #FFBB98; /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
