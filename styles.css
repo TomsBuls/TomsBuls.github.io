@@ -45,17 +45,17 @@ header {
 
 /* Section Styles */
 section {
-    background-color: #FBE0C3; /* Peach */
+    background-color: rgba(251, 224, 195, 0.8); /* Peachy background with 80% lightened effect */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #FFBB98; /* Salmon border */
+    border: 1px solid rgba(255, 187, 152, 0.8); /* Lightened Salmon border */
 }
 
 .projects section {
-    background-color: #FFBB98; /* Salmon */
-    border: 1px solid #7D8E95; /* Gray-Blue border */
+    background-color: rgba(255, 187, 152, 0.8); /* Lightened Salmon */
+    border: 1px solid rgba(125, 142, 149, 0.8); /* Lightened Gray-Blue border */
 }
 
 /* Projects Section */
@@ -66,8 +66,8 @@ section {
 }
 
 .project {
-    background-color: #FBE0C3; /* Peach */
-    border: 1px solid #FFBB98;
+    background-color: rgba(251, 224, 195, 0.8); /* Peachy background with 80% lightened effect */
+    border: 1px solid rgba(255, 187, 152, 0.8); /* Lightened Salmon */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -97,8 +97,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #FFBB98; /* Matches borders */
-    border-left: 1px dashed #FFBB98;
+    background: rgba(255, 187, 152, 0.8); /* Lightened border */
+    border-left: 1px dashed rgba(255, 187, 152, 0.8);
 }
 
 .project .text {
@@ -155,17 +155,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #7D8E95; /* Matches Gray-Blue */
+    border-top: 1px dashed rgba(125, 142, 149, 0.8); /* Matches Gray-Blue */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #FBE0C3; /* Matches Projects section */
+    background-color: rgba(251, 224, 195, 0.8); /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #FFBB98; /* Matches Projects section border */
+    border: 1px solid rgba(255, 187, 152, 0.8); /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
