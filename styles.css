@@ -8,9 +8,9 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb, #cfd9df, #f6d365, #fda085);
-    background-size: 300% 300%; /* Increased size for smoother transitions */
-    animation: gradientAnimation 20s ease infinite; /* Smooth and continuous gradient animation */
+    background: linear-gradient(135deg, #FBE0C3, #FFBB98, #7D8E95, #344648);
+    background-size: 300% 300%; /* Larger size for smoother transitions */
+    animation: gradientAnimation 20s ease infinite; /* Moving gradient */
     color: #333;
     padding: 20px 0;
 }
@@ -31,25 +31,31 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: rgba(246, 252, 254, 0.9); /* Subtle bluish tint with slight transparency */
+    background-color: #344648; /* Dark Gray-Teal */
+    color: #ffffff; /* White text for contrast */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid rgba(224, 244, 247, 0.9);
+    border-bottom: 1px solid #7D8E95;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 30px auto;
     max-width: 1200px;
-    border: 1px solid rgba(224, 244, 247, 0.9);
+    border: 1px solid #7D8E95;
 }
 
 /* Section Styles */
 section {
-    background-color: rgba(246, 252, 254, 0.9); /* Slight transparency for a lighter look */
+    background-color: #FBE0C3; /* Peach */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(224, 244, 247, 0.9);
+    border: 1px solid #FFBB98; /* Salmon border */
+}
+
+.projects section {
+    background-color: #FFBB98; /* Salmon */
+    border: 1px solid #7D8E95; /* Gray-Blue border */
 }
 
 /* Projects Section */
@@ -60,8 +66,8 @@ section {
 }
 
 .project {
-    background-color: rgba(246, 252, 254, 0.9); /* Matches other sections */
-    border: 1px solid rgba(224, 244, 247, 0.9);
+    background-color: #FBE0C3; /* Peach */
+    border: 1px solid #FFBB98;
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -91,8 +97,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(224, 244, 247, 0.9);
-    border-left: 1px dashed rgba(224, 244, 247, 0.9);
+    background: #FFBB98; /* Matches borders */
+    border-left: 1px dashed #FFBB98;
 }
 
 .project .text {
@@ -149,17 +155,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed rgba(224, 244, 247, 0.9); /* Matches borders */
+    border-top: 1px dashed #7D8E95; /* Matches Gray-Blue */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(246, 252, 254, 0.9); /* Matches header and projects */
+    background-color: #7D8E95; /* Gray-Blue */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(224, 244, 247, 0.9);
+    border: 1px solid #344648;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -185,11 +191,11 @@ section {
 
 /* Footer */
 footer {
-    background: rgba(246, 252, 254, 0.9); /* Matches other sections */
-    color: #444;
+    background: #344648; /* Matches Header */
+    color: #ffffff; /* White for contrast */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid rgba(224, 244, 247, 0.9);
+    border-top: 1px solid #7D8E95;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
