@@ -8,7 +8,8 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #f4f6f8, #dce7f0); /* Gradient from light greyish-blue to darker tone */
+    background: linear-gradient(135deg, #264653, #2a9d8f, #e9c46a, #f4a261, #e76f51); /* Gradient background */
+    background-size: 200% 200%; /* Ensures a smooth gradient transition */
     color: #333;
     padding: 20px 0;
 }
