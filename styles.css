@@ -30,7 +30,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 10px auto; /* Reduced top margin for a higher position */
-    max-width: 100%; /* Horizontal bar (no side margins) */
+    max-width: 1200px; /* Content width (no full-width horizontal bar) */
     border: 1px solid #edf9fc;
 }
 
