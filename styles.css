@@ -45,7 +45,7 @@ header {
 
 /* Section Styles */
 section {
-    background-color: rgba(134, 163, 195, 0.1); /* Same light bluish tone */
+    background-color: rgba(134, 163, 195, 0.1); /* Constant light bluish tone */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
@@ -61,7 +61,7 @@ section {
 }
 
 .project {
-    background-color: rgba(134, 163, 195, 0.1); /* Same light bluish tone */
+    background-color: rgba(134, 163, 195, 0.1); /* Constant light bluish tone */
     border: 1px solid rgba(134, 163, 195, 0.2);
     border-radius: 8px;
     padding: 40px;
@@ -157,10 +157,10 @@ section {
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(134, 163, 195, 0.1); /* Same light bluish tone */
+    background-color: rgba(134, 163, 195, 0.1); /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(134, 163, 195, 0.2); /* Matches section border */
+    border: 1px solid rgba(134, 163, 195, 0.2); /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
