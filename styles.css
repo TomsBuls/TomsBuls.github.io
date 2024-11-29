@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #A1C4FD, #C2E9FB, #B2FEFA, #89F7FE, #81D4FA);
+    background: linear-gradient(135deg, #D8E0BB, #B6CEC7, #86A3C3, #7268A6, #6B3074);
     background-size: 300% 300%; /* Larger size for smoother transitions */
     animation: gradientAnimation 20s ease infinite; /* Moving gradient */
     color: #333;
@@ -31,26 +31,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #4A6EA6; /* Lighter Blue-Grey */
+    background-color: #A3A9AF; /* Light Grey */
     color: #ffffff; /* White text for contrast */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #7DAFE9;
+    border-bottom: 1px solid #B6CEC7;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 30px auto;
     max-width: 1200px;
-    border: 1px solid #7DAFE9;
+    border: 1px solid #B6CEC7;
 }
 
 /* Section Styles */
 section {
-    background-color: rgba(240, 248, 255, 0.9); /* Almost white with a light blue tint */
+    background-color: rgba(134, 163, 195, 0.5); /* Light Blue with transparency */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(200, 230, 250, 0.8); /* Subtle light blue border */
+    border: 1px solid rgba(134, 163, 195, 0.5); /* Subtle matching border */
 }
 
 /* Projects Section */
@@ -61,8 +61,8 @@ section {
 }
 
 .project {
-    background-color: rgba(240, 248, 255, 0.9); /* Same as sections: light blue tint */
-    border: 1px solid rgba(200, 230, 250, 0.8);
+    background-color: rgba(134, 163, 195, 0.5); /* Matches Section Background */
+    border: 1px solid rgba(134, 163, 195, 0.5);
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -92,8 +92,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(200, 230, 250, 0.8); /* Matches borders */
-    border-left: 1px dashed rgba(200, 230, 250, 0.8);
+    background: rgba(134, 163, 195, 0.5);
+    border-left: 1px dashed rgba(134, 163, 195, 0.5);
 }
 
 .project .text {
@@ -150,17 +150,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed rgba(125, 180, 210, 0.8); /* Matches lighter blue tone */
+    border-top: 1px dashed rgba(134, 163, 195, 0.5); /* Matches lighter blue tone */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(240, 248, 255, 0.9); /* Matches Projects section */
+    background-color: rgba(134, 163, 195, 0.5); /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(200, 230, 250, 0.8); /* Matches Projects section border */
+    border: 1px solid rgba(134, 163, 195, 0.5); /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
