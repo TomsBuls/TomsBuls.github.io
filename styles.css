@@ -22,16 +22,16 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #e0f4f8; /* 50% darker than #f5fbfd */
-    color: #000000; /* Black text for readability */
+    background-color: #4ca1af; /* Matches the background */
+    color: #ffffff; /* White text for readability */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #edf9fc; /* Subtle light border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #d3d3d3; /* Light grey border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border-radius: 8px;
     margin: 10px auto;
     max-width: 1200px;
-    border: 1px solid #edf9fc;
+    border: 1px solid #d3d3d3; /* Light grey border to define the box */
 }
 
 /* Section Styles */
