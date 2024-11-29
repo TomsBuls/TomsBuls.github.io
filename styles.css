@@ -8,18 +8,9 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #4ca1af, #c4e0e5, #81d4fa); /* Calming blue moving gradient */
-    background-size: 300% 300%;
-    animation: gradientAnimation 20s ease infinite; /* Moving gradient */
+    background-color: #4ca1af; /* Darkest tone from the gradient */
     color: #333;
     padding: 20px 0;
-}
-
-/* Floating Gradient Animation */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 /* Main Content Wrapper */
@@ -31,7 +22,7 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #e0f4f8; /* Slightly darker than #f5fbfd */
+    background-color: #e0f4f8; /* 50% darker than #f5fbfd */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
