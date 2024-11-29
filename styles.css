@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #4ca1af, #c4e0e5); /* Static gradient background */
+    background: linear-gradient(135deg, #d6eef5, #effafc); /* 80% lighter gradient */
     color: #333;
     padding: 20px 0;
 }
@@ -22,26 +22,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #95bfc9; /* 50% darker than content background */
+    background-color: #e5f7fa; /* 80% lighter than original header color */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #bddfe5; /* Subtle light blue border */
+    border-bottom: 1px solid #edf9fc; /* Lighter border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 30px auto;
-    max-width: 1200px;
-    border: 1px solid #bddfe5;
+    margin: 10px auto; /* Reduced top margin for a higher position */
+    max-width: 100%; /* Horizontal bar (no side margins) */
+    border: 1px solid #edf9fc;
 }
 
 /* Section Styles */
 section {
-    background-color: #e8f4f9; /* Lighter version of #c4e0e5 */
+    background-color: #f5fbfd; /* 80% lighter content background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #cce7ee; /* Subtle light blue border */
+    border: 1px solid #f0fafd; /* Subtle lighter border */
 }
 
 /* Projects Section */
@@ -52,8 +52,8 @@ section {
 }
 
 .project {
-    background-color: #e8f4f9; /* Matches other sections */
-    border: 1px solid #cce7ee;
+    background-color: #f5fbfd; /* Matches other sections */
+    border: 1px solid #f0fafd; /* Subtle lighter border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -83,8 +83,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #cce7ee; /* Matches borders */
-    border-left: 1px dashed #cce7ee;
+    background: #f0fafd; /* Matches borders */
+    border-left: 1px dashed #f0fafd;
 }
 
 .project .text {
@@ -141,17 +141,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #cce7ee; /* Matches borders */
+    border-top: 1px dashed #f0fafd; /* Matches borders */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #e8f4f9; /* Matches Projects section */
+    background-color: #f5fbfd; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #cce7ee; /* Matches Projects section border */
+    border: 1px solid #f0fafd; /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -181,7 +181,7 @@ footer {
     color: #000000; /* Black for contrast */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #f0fafd;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
