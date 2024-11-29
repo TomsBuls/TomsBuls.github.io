@@ -8,9 +8,18 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #FFD89B, #19547B); /* Static gradient background */
+    background: linear-gradient(135deg, #FFD89B, #19547B); /* Background gradient */
+    background-size: 300% 300%; /* Larger size for smoother transitions */
+    animation: gradientAnimation 20s ease infinite; /* Moving gradient */
     color: #333;
     padding: 20px 0;
+}
+
+/* Floating Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Main Content Wrapper */
@@ -22,15 +31,16 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #FFF5E1; /* Light pastel color for contrast */
+    background-color: #ffffff; /* Static white background */
     color: #000000; /* Black text for readability */
-    padding: 20px; /* Reduced padding for a compact appearance */
+    padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #FFDBA4; /* Subtle border */
+    border-bottom: 1px solid #ddd; /* Subtle light grey border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 0; /* No border-radius for a flat bar effect */
-    margin: 10px 0 0 0; /* Smaller top margin, no left/right margins */
-    width: 100%; /* Spans the full width of the page */
+    border-radius: 8px;
+    margin: 30px auto;
+    max-width: 1200px;
+    border: 1px solid #ddd;
 }
 
 /* Section Styles */
