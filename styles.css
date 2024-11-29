@@ -8,9 +8,18 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #4ca1af; /* Darkest tone from the gradient */
+    background: linear-gradient(135deg, #6bc5fa, #1a4c7d); /* Gradient from the uploaded image */
+    background-size: 300% 300%;
+    animation: gradientAnimation 20s ease infinite; /* Moving gradient */
     color: #333;
     padding: 20px 0;
+}
+
+/* Floating Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Main Content Wrapper */
@@ -22,16 +31,16 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #4ca1af; /* Matches the background */
-    color: #ffffff; /* White text for readability */
+    background-color: #e0f4f8; /* Slightly darker than #f5fbfd */
+    color: #000000; /* Black text for readability */
     padding: 30px;
-    text-align: center;
+    text-align: left; /* Left-aligned text */
     border-bottom: 2px solid #b3e0f2; /* Light blue border, slightly thicker */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border-radius: 8px;
     margin: 10px auto;
     max-width: 1200px;
-    border: 2px solid #b3e0f2; /* Light blue border */
+    border: 1px solid #b3e0f2; /* Light blue border */
 }
 
 /* Section Styles */
