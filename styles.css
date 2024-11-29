@@ -31,7 +31,7 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #e5f7fa; /* Static light blue */
+    background-color: #d0eef3; /* 50% darker than #f5fbfd */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
