@@ -45,12 +45,12 @@ header {
 
 /* Section Styles */
 section {
-    background-color: rgba(134, 163, 195, 0.5); /* Light Blue with transparency */
+    background-color: rgba(245, 248, 250, 0.9); /* Very light with subtle blue hint */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(134, 163, 195, 0.5); /* Subtle matching border */
+    border: 1px solid rgba(200, 230, 250, 0.3); /* Very subtle light blue border */
 }
 
 /* Projects Section */
@@ -61,8 +61,8 @@ section {
 }
 
 .project {
-    background-color: rgba(134, 163, 195, 0.5); /* Matches Section Background */
-    border: 1px solid rgba(134, 163, 195, 0.5);
+    background-color: rgba(245, 248, 250, 0.9); /* Very light blue hint */
+    border: 1px solid rgba(200, 230, 250, 0.3); /* Very subtle border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -92,8 +92,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(134, 163, 195, 0.5);
-    border-left: 1px dashed rgba(134, 163, 195, 0.5);
+    background: rgba(200, 230, 250, 0.3); /* Matches borders */
+    border-left: 1px dashed rgba(200, 230, 250, 0.3);
 }
 
 .project .text {
@@ -150,17 +150,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed rgba(134, 163, 195, 0.5); /* Matches lighter blue tone */
+    border-top: 1px dashed rgba(200, 230, 250, 0.3); /* Subtle lighter blue */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(134, 163, 195, 0.5); /* Matches Projects section */
+    background-color: rgba(245, 248, 250, 0.9); /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(134, 163, 195, 0.5); /* Matches Projects section border */
+    border: 1px solid rgba(200, 230, 250, 0.3); /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
