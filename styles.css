@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #e5e6ea, #f5d9b3, #f4b96a); /* Gradient inspired by the image */
+    background: linear-gradient(135deg, #f2f6f9, #f9f4ed, #fef9f2); /* 80% lighter gradient */
     background-size: 300% 300%;
     animation: gradientAnimation 20s ease infinite; /* Moving gradient */
     color: #333;
@@ -31,26 +31,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #f9e6cc; /* Light complementary shade */
+    background-color: #fafbf9; /* 80% lighter than #f9e6cc */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left; /* Left-aligned text */
-    border-bottom: 2px solid #f5c88c; /* Subtle orange border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom: 2px solid #f8f2e4; /* Subtle light border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
     margin: 10px auto;
     max-width: 1200px;
-    border: 1px solid #f5c88c; /* Subtle border */
+    border: 1px solid #f8f2e4; /* Subtle border */
 }
 
 /* Section Styles */
 section {
-    background-color: #fdf3e6; /* Very light shade inspired by the image */
+    background-color: #fcfdfc; /* 80% lighter than #fdf3e6 */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.02); /* Reduced shadow for a softer look */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #fbe0c9; /* Subtle border */
+    border: 1px solid #fafbf9; /* Subtle lighter border */
 }
 
 /* Projects Section */
@@ -61,11 +61,11 @@ section {
 }
 
 .project {
-    background-color: #fdf3e6; /* Matches other sections */
-    border: 1px solid #fbe0c9; /* Subtle lighter border */
+    background-color: #fcfdfc; /* Matches other sections */
+    border: 1px solid #fafbf9; /* Subtle lighter border */
     border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.02); /* Reduced shadow for a softer look */
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -92,8 +92,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #fbe0c9; /* Matches borders */
-    border-left: 1px dashed #fbe0c9;
+    background: #fafbf9; /* Matches borders */
+    border-left: 1px dashed #fafbf9;
 }
 
 .project .text {
@@ -150,17 +150,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #fbe0c9; /* Matches borders */
+    border-top: 1px dashed #fafbf9; /* Matches borders */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #fdf3e6; /* Matches Projects section */
+    background-color: #fcfdfc; /* Matches Projects section */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #fbe0c9; /* Matches Projects section border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.02); /* Reduced shadow for a softer look */
+    border: 1px solid #fafbf9; /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -186,14 +186,14 @@ section {
 
 /* Footer */
 footer {
-    background: #fdf3e6; /* Matches header and content sections */
+    background: #fcfdfc; /* Matches header and content sections */
     color: #000000; /* Black for contrast */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #fbe0c9;
+    border-top: 1px solid #fafbf9;
     margin-top: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.02); /* Reduced shadow for a softer look */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
