@@ -8,9 +8,18 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #d6eef5, #effafc); /* 80% lighter gradient */
+    background: linear-gradient(135deg, #4ca1af, #c4e0e5, #81d4fa); /* Calming blue moving gradient */
+    background-size: 300% 300%;
+    animation: gradientAnimation 20s ease infinite; /* Moving gradient */
     color: #333;
     padding: 20px 0;
+}
+
+/* Floating Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Main Content Wrapper */
@@ -22,21 +31,21 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #e5f7fa; /* 80% lighter than original header color */
+    background-color: #e5f7fa; /* Static light blue */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #edf9fc; /* Lighter border */
+    border-bottom: 1px solid #edf9fc; /* Subtle light border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 10px auto; /* Reduced top margin for a higher position */
-    max-width: 1200px; /* Content width (no full-width horizontal bar) */
+    margin: 10px auto;
+    max-width: 1200px;
     border: 1px solid #edf9fc;
 }
 
 /* Section Styles */
 section {
-    background-color: #f5fbfd; /* 80% lighter content background */
+    background-color: #f5fbfd; /* Static lighter blue background for content */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
