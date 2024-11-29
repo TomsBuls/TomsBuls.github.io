@@ -25,13 +25,13 @@ header {
     background-color: #4ca1af; /* Matches the background */
     color: #ffffff; /* White text for readability */
     padding: 30px;
-    text-align: left;
-    border-bottom: 1px solid #d3d3d3; /* Light grey border */
+    text-align: center;
+    border-bottom: 2px solid #b3e0f2; /* Light blue border, slightly thicker */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border-radius: 8px;
     margin: 10px auto;
     max-width: 1200px;
-    border: 1px solid #d3d3d3; /* Light grey border to define the box */
+    border: 2px solid #b3e0f2; /* Light blue border */
 }
 
 /* Section Styles */
