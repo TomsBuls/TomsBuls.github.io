@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #FCE3C5); /* Blue to soft peach gradient */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveGradient 60s ease infinite; /* Slow moving gradient */
+    animation: moveGradient 60s ease infinite alternate; /* Slow moving gradient with reverse effect */
     color: #333;
     padding: 20px 0;
 }
@@ -21,10 +21,10 @@ body {
         background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 50% 50%; /* Stops when orange covers half the screen */
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 50%; /* Returns to the starting position */
     }
 }
 
@@ -34,10 +34,10 @@ body {
         background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 50% 50%; /* Stops when halfway through */
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 50%; /* Reverses to start */
     }
 }
 
@@ -66,7 +66,7 @@ header {
 section {
     background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Light beige to white gradient */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveSectionGradient 60s ease infinite; /* Syncs with outer background */
+    animation: moveSectionGradient 60s ease infinite alternate; /* Syncs with outer background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     margin-bottom: 30px;
@@ -84,7 +84,7 @@ section {
 .project {
     background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
     background-size: 300% 300%;
-    animation: moveSectionGradient 60s ease infinite; /* Syncs with section gradient */
+    animation: moveSectionGradient 60s ease infinite alternate; /* Syncs with section gradient */
     border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
@@ -188,7 +188,7 @@ section {
     padding: 20px;
     background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
     background-size: 300% 300%;
-    animation: moveSectionGradient 60s ease infinite;
+    animation: moveSectionGradient 60s ease infinite alternate;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(200, 220, 240, 0.2);
