@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #ffffff, #d6eef5); /* Soft white to light blue gradient */
+    background: linear-gradient(to bottom, #ffffff, #f8f8f4); /* Light background */
     color: #333;
     padding: 20px 0;
 }
@@ -22,26 +22,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #eef9fd; /* Light blue matching the content background */
-    color: #000000; /* Black text for readability */
+    background-color: #f4f9f4; /* Subtle greenish white */
+    color: #1f3c3c; /* Dark green text for contrast */
     padding: 30px;
-    text-align: left; /* Align text to the left */
-    border-bottom: 2px solid #d1edf7; /* Subtle light blue border */
+    text-align: left;
+    border-bottom: 2px solid #d3e4d1; /* Light green border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
-    margin: 10px auto;
-    max-width: 1200px;
-    border: 1px solid #d1edf7; /* Light blue border */
+    max-width: 1200px; /* Match other sections */
+    margin: 0 auto 30px; /* Center and equal spacing */
+    border: 1px solid #d3e4d1; /* Subtle greenish border */
 }
 
 /* Section Styles */
 section {
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff; /* Clean white background */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #dceff7; /* Very light blue border */
+    border: 1px solid #e2e2de; /* Neutral light border */
 }
 
 /* Projects Section */
@@ -52,11 +52,11 @@ section {
 }
 
 .project {
-    background-color: #ffffff; /* Matches other sections */
-    border: 1px solid #dceff7; /* Very light blue border */
+    background-color: #f8f8f4; /* Light beige */
+    border: 1px solid #d9d9cf; /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -83,8 +83,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #dceff7; /* Matches borders */
-    border-left: 1px dashed #dceff7;
+    background: #e2e2de;
+    border-left: 1px dashed #e2e2de;
 }
 
 .project .text {
@@ -95,7 +95,7 @@ section {
 .project .links a {
     display: block;
     margin-bottom: 5px;
-    color: #007BFF;
+    color: #1f4c4c; /* Deep green */
     text-decoration: none;
 }
 
@@ -141,7 +141,7 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #dceff7; /* Matches borders */
+    border-top: 1px dashed #e2e2de; /* Neutral border */
 }
 
 /* Power BI Section */
@@ -150,8 +150,8 @@ section {
     padding: 20px;
     background-color: #ffffff; /* Matches Projects section */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
-    border: 1px solid #dceff7; /* Matches Projects section border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border: 1px solid #e2e2de; /* Light neutral border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -177,15 +177,22 @@ section {
 
 /* Footer */
 footer {
-    background: #ffffff; /* Matches header and content sections */
-    color: #000000; /* Black for contrast */
+    background-color: #f8f8f4; /* Match overall theme */
+    color: #333; /* Neutral text color */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #dceff7;
+    border-top: 1px solid #e2e2de; /* Neutral border */
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Buttons and Highlights */
+button, a:hover {
+    background-color: #97cba9; /* Gentle green for hover effects */
+    color: #ffffff; /* White text for contrast */
+    border: none;
 }
