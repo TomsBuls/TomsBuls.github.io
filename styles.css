@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #BDC3C7, #ECF0F1); /* Static fallback gradient */
     background-size: 300% 300%; /* For smooth animation */
-    animation: moveGradient 10s ease infinite; /* Moving gradient effect */
+    animation: moveGradient 30s ease infinite; /* Slow moving gradient */
     color: #333333; /* Neutral text color */
     padding: 20px 0;
 }
@@ -31,8 +31,8 @@ body {
 /* Main Content Wrapper */
 main {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 20px; /* Equal padding */
 }
 
 /* Header Section - About Me */
@@ -44,8 +44,8 @@ header {
     border-bottom: 2px solid #BDC3C7; /* Light gray border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
-    max-width: 1200px; /* Ensure same width as other sections */
-    margin: 0 auto 30px; /* Equal side margins and spacing below */
+    max-width: 1200px; /* Matches other sections */
+    margin: 0 auto 30px; /* Centered with equal spacing */
     border: 1px solid #BDC3C7; /* Subtle gray border */
 }
 
@@ -58,7 +58,7 @@ section {
     padding: 20px;
     border: 1px solid #BDC3C7; /* Neutral light gray border */
     max-width: 1200px; /* Ensure uniform width */
-    margin: 0 auto; /* Center with equal side margins */
+    margin: 0 auto; /* Center horizontally */
 }
 
 /* Projects Section */
@@ -67,7 +67,7 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     max-width: 1200px; /* Ensure alignment */
-    margin: 0 auto; /* Center with equal margins */
+    margin: 0 auto; /* Center horizontally */
 }
 
 .project {
@@ -172,7 +172,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border: 1px solid #BDC3C7; /* Light gray border */
     max-width: 1200px; /* Same width as header and projects */
-    margin: 0 auto; /* Center with equal margins */
+    margin: 0 auto; /* Center horizontally */
 }
 
 .power-bi-dashboard {
