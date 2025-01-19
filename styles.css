@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #A9C9E2, #D4E9F5); /* Blue gradient */
+    background: linear-gradient(90deg, #1E3A8A, #2563EB, #60A5FA, #93C5FD, #BFDBFE); /* Soft blues */
     background-size: 300% 300%; /* Smooth animation */
     animation: moveGradient 60s ease infinite; /* Slow moving gradient */
     color: #333;
@@ -28,16 +28,16 @@ body {
     }
 }
 
-/* Section Gradient Animation */
-@keyframes moveSectionGradient {
+/* Wave-Like Animation */
+@keyframes waveAnimation {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
 }
 
@@ -50,28 +50,28 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #fefdfc; /* Static light tone */
+    background: linear-gradient(135deg, #BFDBFE, #93C5FD); /* Static soft blue tones */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #ece9e6; /* Subtle border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-bottom: 1px solid #BFDDFE; /* Subtle light blue border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for consistency */
     border-radius: 8px;
     max-width: 1140px; /* Matches other sections */
-    margin: 0 auto 30px; /* Equal margins and spacing */
-    border: 1px solid #ece9e6; /* Matches other sections */
+    margin: 0 auto 30px; /* Equal margins and spacing below */
+    border: 1px solid #BFDDFE;
 }
 
 /* Section Styles */
 section {
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Very light blue to white */
-    background-size: 300% 300%; /* Smooth animation */
-    animation: moveSectionGradient 60s ease infinite; /* Syncs with body gradient */
+    background: linear-gradient(90deg, #93C5FD, #D1E3FE, #F7FAFE);
+    background-size: 200% 200%; /* Dynamic animation scaling */
+    animation: waveAnimation 30s ease infinite; /* Wave-like movement */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle blue border */
+    border: 1px solid rgba(180, 200, 255, 0.2); /* Very subtle blue border */
 }
 
 /* Projects Section */
@@ -82,13 +82,13 @@ section {
 }
 
 .project {
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
-    background-size: 300% 300%;
-    animation: moveSectionGradient 60s ease infinite; /* Syncs with section gradient */
-    border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle blue border */
+    background: linear-gradient(135deg, #F7FAFE, #EAF4FF, #93C5FD);
+    background-size: 150% 150%; /* Dynamic animation */
+    animation: waveAnimation 40s ease infinite; /* Slightly slower wave */
+    border: 1px solid rgba(180, 200, 255, 0.2); /* Subtle blue border */
     border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -115,8 +115,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(200, 220, 240, 0.2); /* Subtle blue border */
-    border-left: 1px dashed rgba(200, 220, 240, 0.2);
+    background: rgba(180, 200, 255, 0.1); /* Matches blue borders */
+    border-left: 1px dashed rgba(180, 200, 255, 0.1);
 }
 
 .project .text {
@@ -125,9 +125,9 @@ section {
 }
 
 .project .text h3 {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Standardized size */
     font-weight: bold;
-    color: #333;
+    color: #333; /* Darker text for visibility */
 }
 
 .project .links a {
@@ -150,48 +150,16 @@ section {
     margin: 0 0 10px;
 }
 
-/* Image Styling */
-.project .image {
-    width: 48%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project .image img {
-    max-width: 95%;
-    max-height: 95%;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project .image:hover img {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Horizontal Separator */
-.horizontal {
-    width: 90%;
-    margin: 20px 0;
-    border-top: 1px dashed rgba(200, 220, 240, 0.2); /* Matches blue borders */
-}
-
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
-    background-size: 300% 300%;
-    animation: moveSectionGradient 60s ease infinite;
+    background: linear-gradient(90deg, #EAF4FF, #BFDBFE, #93C5FD);
+    background-size: 150% 150%;
+    animation: waveAnimation 50s ease infinite; /* Smooth and subtle movement */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(200, 220, 240, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
+    border: 1px solid rgba(180, 200, 255, 0.2); /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -217,14 +185,14 @@ section {
 
 /* Footer */
 footer {
-    background: #fefdfc;
-    color: #000000;
+    background: linear-gradient(135deg, #93C5FD, #BFDBFE, #EAF4FF); /* Footer gradient */
+    color: #000000; /* Black for contrast */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #ece9e6;
+    border-top: 1px solid rgba(180, 200, 255, 0.2);
     margin-top: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
