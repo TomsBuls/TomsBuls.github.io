@@ -6,11 +6,11 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Palatino font for body and titles */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Consistent font across all sections */
     line-height: 1.6;
     background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #FCE3C5); /* Blue to soft peach gradient */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveGradient 60s ease infinite alternate; /* Slow moving gradient with reverse effect */
+    animation: moveGradient 60s ease infinite alternate; /* Gradient alternates movement */
     color: #333;
     padding: 20px 0;
 }
@@ -21,10 +21,10 @@ body {
         background-position: 0% 50%;
     }
     50% {
-        background-position: 50% 50%; /* Stops when orange covers half the screen */
+        background-position: 50% 50%; /* Stops when halfway */
     }
     100% {
-        background-position: 0% 50%; /* Returns to the starting position */
+        background-position: 0% 50%; /* Reverses to start */
     }
 }
 
@@ -34,7 +34,7 @@ body {
         background-position: 0% 50%;
     }
     50% {
-        background-position: 50% 50%; /* Stops when halfway through */
+        background-position: 50% 50%; /* Stops when halfway */
     }
     100% {
         background-position: 0% 50%; /* Reverses to start */
@@ -50,24 +50,25 @@ main {
 
 /* Header Section - About Me */
 header {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Ensures same font */
-    background-color: rgba(255, 255, 255, 0.9); /* Subtle white tone */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Same as Projects and Power BI sections */
+    background-size: 300% 300%;
+    animation: moveSectionGradient 60s ease infinite alternate; /* Sync animation with sections */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid rgba(220, 220, 220, 0.5); /* Subtle border */
+    border-bottom: 1px solid rgba(200, 220, 240, 0.2); /* Subtle border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
     max-width: 1140px; /* Matches other sections */
     margin: 0 auto 30px; /* Equal margins and spacing */
-    border: 1px solid rgba(220, 220, 220, 0.5);
+    border: 1px solid rgba(200, 220, 240, 0.2);
 }
 
 /* Section Styles */
 section {
-    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Light beige to white gradient */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Same gradient as About Me */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveSectionGradient 60s ease infinite alternate; /* Syncs with outer background */
+    animation: moveSectionGradient 60s ease infinite alternate; /* Sync animation */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     margin-bottom: 30px;
@@ -85,7 +86,7 @@ section {
 .project {
     background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
     background-size: 300% 300%;
-    animation: moveSectionGradient 60s ease infinite alternate; /* Syncs with section gradient */
+    animation: moveSectionGradient 60s ease infinite alternate; /* Sync with section gradient */
     border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
@@ -116,7 +117,7 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(200, 220, 240, 0.2); /* Subtle blue border */
+    background: rgba(200, 220, 240, 0.2); /* Matches beige border */
     border-left: 1px dashed rgba(200, 220, 240, 0.2);
 }
 
@@ -126,7 +127,7 @@ section {
 }
 
 .project .text h3 {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Ensures same font */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 1.2em;
     font-weight: bold;
     color: #333;
@@ -208,7 +209,7 @@ section {
     margin-bottom: 10px;
     font-size: 1.5em;
     font-weight: bold;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Ensures same font */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 .power-bi-dashboard iframe {
@@ -220,7 +221,7 @@ section {
 
 /* Footer */
 footer {
-    background: rgba(255, 250, 245, 0.9); /* Matches header and section tones */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Matches sections */
     color: #000000;
     text-align: center;
     padding: 10px 0;
