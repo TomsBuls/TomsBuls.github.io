@@ -8,8 +8,8 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #FFFFFF, #F0F0F0); /* Light minimal gradient */
-    color: #333333; /* Dark gray text */
+    background: linear-gradient(to bottom, #E6FAE6, #CFF5CF); /* Light green gradient */
+    color: #1B5E20; /* Dark green for text */
     padding: 20px 0;
 }
 
@@ -22,26 +22,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #FFFFFF; /* White background for header */
-    color: #333333; /* Dark text */
+    background-color: #E6FAE6; /* Light green */
+    color: #1B5E20; /* Dark green for text */
     padding: 30px;
     text-align: left;
-    border-bottom: 2px solid #B0B0B0; /* Light gray border */
+    border-bottom: 2px solid #A5D6A7; /* Medium green border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
-    max-width: 1200px; /* Matches other sections */
-    margin: 0 auto 30px; /* Equal side margins and spacing below */
-    border: 1px solid #B0B0B0; /* Subtle gray border */
+    max-width: 1200px; /* Ensure same width as other sections */
+    margin: 0 auto 30px; /* Centered with equal spacing */
+    border: 1px solid #A5D6A7; /* Subtle border */
 }
 
 /* Section Styles */
 section {
-    background-color: #FFFFFF; /* Clean white background */
+    background-color: #E6FAE6; /* Light green */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #B0B0B0; /* Neutral light gray border */
+    border: 1px solid #A5D6A7; /* Medium green border */
 }
 
 /* Projects Section */
@@ -54,8 +54,8 @@ section {
 }
 
 .project {
-    background-color: #FFFFFF; /* White background */
-    border: 1px solid #B0B0B0; /* Neutral gray border */
+    background-color: #CFF5CF; /* Soft green background */
+    border: 1px solid #A5D6A7; /* Medium green border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
@@ -85,8 +85,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #B0B0B0; /* Neutral light gray */
-    border-left: 1px dashed #B0B0B0;
+    background: #A5D6A7; /* Medium green */
+    border-left: 1px dashed #A5D6A7;
 }
 
 .project .text {
@@ -97,12 +97,12 @@ section {
 .project .links a {
     display: block;
     margin-bottom: 5px;
-    color: #333333; /* Neutral dark gray for links */
+    color: #1B5E20; /* Dark green for links */
     text-decoration: none;
 }
 
 .project .links a:hover {
-    text-decoration: underline; /* Simple hover effect with no background */
+    text-decoration: underline; /* Simple underline on hover */
 }
 
 /* Unified Description Font Size */
@@ -110,7 +110,7 @@ section {
 .power-bi-dashboard > p {
     font-size: 0.9em;
     line-height: 1.4;
-    color: #707070; /* Mid-gray for paragraph text */
+    color: #388E3C; /* Medium-dark green for text */
     margin: 0 0 10px;
 }
 
@@ -135,7 +135,7 @@ section {
 }
 
 .project .image:hover img {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.05); /* Subtle zoom on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -143,17 +143,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #B0B0B0; /* Neutral gray */
+    border-top: 1px dashed #A5D6A7; /* Medium green border */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #FFFFFF; /* Matches Projects section */
+    background-color: #CFF5CF; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    border: 1px solid #B0B0B0; /* Light gray border */
+    border: 1px solid #A5D6A7; /* Medium green border */
     max-width: 1200px; /* Same width as header and projects */
     margin-left: auto;
     margin-right: auto;
@@ -168,7 +168,7 @@ section {
     margin-bottom: 10px;
     font-size: 1.5em;
     font-weight: bold;
-    color: #333333; /* Neutral dark gray */
+    color: #1B5E20; /* Dark green */
 }
 
 .power-bi-dashboard iframe {
@@ -180,11 +180,11 @@ section {
 
 /* Footer */
 footer {
-    background-color: #F0F0F0; /* Light gray background */
-    color: #333333; /* Dark gray text */
+    background-color: #E6FAE6; /* Light green background */
+    color: #1B5E20; /* Dark green text */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #B0B0B0; /* Neutral gray border */
+    border-top: 1px solid #A5D6A7; /* Medium green border */
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
@@ -195,6 +195,6 @@ footer {
 
 /* Buttons and Highlights */
 button, a:hover {
-    color: #707070; /* Mid-gray for hover effects */
-    border: none; /* Remove default border */
+    color: #1B5E20; /* Dark green for hover effects */
+    border: none; /* No additional border */
 }
