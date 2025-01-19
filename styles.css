@@ -44,7 +44,7 @@ header {
     border-bottom: 1px solid #dceff7; /* Subtle light blue border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for consistency */
     border-radius: 8px;
-    max-width: 1125px; /* Matches other sections */
+    max-width: 1130px; /* Matches other sections */
     margin: 0 auto 30px; /* Equal margins and spacing below */
     border: 1px solid #dceff7; /* Matches Projects section border */
 }
