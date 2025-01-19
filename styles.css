@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7E4D0, #F2D7C3); /* Blue to beige gradient */
     background-size: 300% 300%; /* Smooth animation */
@@ -51,12 +51,12 @@ header {
 
 /* Section Styles */
 section {
-    background-color: #ffffff; /* White background for content */
+    background-color: #fdf8f5; /* Subtle light beige */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #dceff7; /* Very light blue border */
+    border: 1px solid rgba(220, 200, 180, 0.2); /* Light beige border */
 }
 
 /* Projects Section */
@@ -67,8 +67,8 @@ section {
 }
 
 .project {
-    background-color: #ffffff; /* Matches other sections */
-    border: 1px solid #dceff7; /* Very light blue border */
+    background-color: #fdf8f5; /* Matches section light beige tone */
+    border: 1px solid rgba(220, 200, 180, 0.3); /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
@@ -98,13 +98,19 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #dceff7; /* Matches borders */
-    border-left: 1px dashed #dceff7;
+    background: rgba(220, 200, 180, 0.2); /* Matches beige borders */
+    border-left: 1px dashed rgba(220, 200, 180, 0.2);
 }
 
 .project .text {
     width: 48%;
     padding-right: 2%;
+}
+
+.project .text h3 {
+    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-weight: bold;
+    color: #333; /* Darker text for visibility */
 }
 
 .project .links a {
@@ -156,17 +162,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #dceff7; /* Matches borders */
+    border-top: 1px dashed rgba(220, 200, 180, 0.2); /* Matches beige borders */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #ffffff; /* Matches Projects section */
+    background-color: #fdf8f5; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
-    border: 1px solid #dceff7; /* Matches Projects section border */
+    border: 1px solid rgba(220, 200, 180, 0.2); /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
