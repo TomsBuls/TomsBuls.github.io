@@ -8,64 +8,40 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7E4D0, #F2D7C3); /* Subtle blue-to-light beige */
-    background-size: 300% 300%; /* Smooth animation */
-    animation: moveGradient 30s ease infinite; /* Slow moving gradient effect */
+    background: linear-gradient(to bottom, #ffffff, #d6eef5); /* Soft white to light blue gradient */
     color: #333;
     padding: 20px 0;
-}
-
-/* Gradient Animation */
-@keyframes moveGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 /* Main Content Wrapper */
 main {
     max-width: 1200px;
-    margin: 0 auto; /* Ensure centered content */
-    padding: 0 20px; /* Add consistent padding */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Header Section - About Me */
 header {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white to blend with gradient */
+    background-color: #eef9fd; /* Light blue matching the content background */
     color: #000000; /* Black text for readability */
     padding: 30px;
-    text-align: left;
-    border-bottom: 2px solid rgba(209, 237, 247, 0.8); /* Subtle light blue border */
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #d1edf7; /* Subtle light blue border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
-    max-width: 1200px; /* Matches other sections */
-    margin: 0 auto 30px; /* Equal margins and spacing below */
-    border: 1px solid rgba(209, 237, 247, 0.8); /* Light blue border */
+    margin: 10px auto;
+    max-width: 1200px;
+    border: 1px solid #d1edf7; /* Light blue border */
 }
 
 /* Section Styles */
 section {
-    background: linear-gradient(
-        90deg,
-        rgba(44, 62, 80, 0.5),
-        rgba(52, 73, 94, 0.5),
-        rgba(127, 140, 141, 0.5),
-        rgba(247, 228, 208, 0.5),
-        rgba(242, 215, 195, 0.5)
-    ); /* 50% transparency for gradient */
+    background-color: #ffffff; /* White background for content */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(220, 239, 247, 0.2); /* Very light border blending with the gradient */
-    max-width: 1200px; /* Ensure uniform width */
-    margin: 0 auto; /* Center content */
+    border: 1px solid #dceff7; /* Very light blue border */
 }
 
 /* Projects Section */
@@ -73,20 +49,11 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    max-width: 1200px; /* Align with other sections */
-    margin: 0 auto; /* Center horizontally */
 }
 
 .project {
-    background: linear-gradient(
-        90deg,
-        rgba(44, 62, 80, 0.5),
-        rgba(52, 73, 94, 0.5),
-        rgba(127, 140, 141, 0.5),
-        rgba(247, 228, 208, 0.5),
-        rgba(242, 215, 195, 0.5)
-    ); /* 50% transparency for gradient */
-    border: 1px solid rgba(220, 239, 247, 0.2); /* Very light border */
+    background-color: #ffffff; /* Matches other sections */
+    border: 1px solid #dceff7; /* Very light blue border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
@@ -116,8 +83,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(220, 239, 247, 0.2); /* Matches subtle borders */
-    border-left: 1px dashed rgba(220, 239, 247, 0.2);
+    background: #dceff7; /* Matches borders */
+    border-left: 1px dashed #dceff7;
 }
 
 .project .text {
@@ -145,23 +112,60 @@ section {
     margin: 0 0 10px;
 }
 
+/* Image Styling */
+.project .image {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project .image img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project .image:hover img {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontal Separator */
+.horizontal {
+    width: 90%;
+    margin: 20px 0;
+    border-top: 1px dashed #dceff7; /* Matches borders */
+}
+
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background: linear-gradient(
-        90deg,
-        rgba(44, 62, 80, 0.5),
-        rgba(52, 73, 94, 0.5),
-        rgba(127, 140, 141, 0.5),
-        rgba(247, 228, 208, 0.5),
-        rgba(242, 215, 195, 0.5)
-    ); /* 50% transparency for gradient */
+    background-color: #ffffff; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
-    border: 1px solid rgba(220, 239, 247, 0.2); /* Matches Projects section border */
-    max-width: 1200px; /* Matches other sections */
-    margin: 0 auto; /* Center with equal margins */
+    border: 1px solid #dceff7; /* Matches Projects section border */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.power-bi-dashboard {
+    margin-bottom: 30px;
+}
+
+.power-bi-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .power-bi-dashboard iframe {
@@ -173,14 +177,15 @@ section {
 
 /* Footer */
 footer {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for footer */
+    background: #ffffff; /* Matches header and content sections */
     color: #000000; /* Black for contrast */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid rgba(220, 239, 247, 0.2);
+    border-top: 1px solid #dceff7;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    max-width: 1200px; /* Matches other sections */
-    margin: 0 auto; /* Center footer with equal margins */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
