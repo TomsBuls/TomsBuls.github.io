@@ -51,7 +51,14 @@ header {
 
 /* Section Styles */
 section {
-    background-color: rgba(255, 255, 255, 0.1); /* Very subtle overlay matching the gradient */
+    background: linear-gradient(
+        90deg,
+        rgba(44, 62, 80, 0.1),
+        rgba(52, 73, 94, 0.1),
+        rgba(127, 140, 141, 0.1),
+        rgba(247, 228, 208, 0.1),
+        rgba(242, 215, 195, 0.1)
+    ); /* Subtle overlay matching the gradient */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
@@ -71,7 +78,14 @@ section {
 }
 
 .project {
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle overlay matching background */
+    background: linear-gradient(
+        90deg,
+        rgba(44, 62, 80, 0.1),
+        rgba(52, 73, 94, 0.1),
+        rgba(127, 140, 141, 0.1),
+        rgba(247, 228, 208, 0.1),
+        rgba(242, 215, 195, 0.1)
+    ); /* Matches subtle overlay */
     border: 1px solid rgba(220, 239, 247, 0.2); /* Very light border */
     border-radius: 8px;
     padding: 40px;
@@ -131,59 +145,23 @@ section {
     margin: 0 0 10px;
 }
 
-/* Image Styling */
-.project .image {
-    width: 48%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project .image img {
-    max-width: 95%;
-    max-height: 95%;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project .image:hover img {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Horizontal Separator */
-.horizontal {
-    width: 90%;
-    margin: 20px 0;
-    border-top: 1px dashed rgba(220, 239, 247, 0.2); /* Matches subtle borders */
-}
-
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle overlay matching gradient */
+    background: linear-gradient(
+        90deg,
+        rgba(44, 62, 80, 0.1),
+        rgba(52, 73, 94, 0.1),
+        rgba(127, 140, 141, 0.1),
+        rgba(247, 228, 208, 0.1),
+        rgba(242, 215, 195, 0.1)
+    ); /* Matches subtle overlay */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
     border: 1px solid rgba(220, 239, 247, 0.2); /* Matches Projects section border */
     max-width: 1200px; /* Matches other sections */
     margin: 0 auto; /* Center with equal margins */
-}
-
-.power-bi-dashboard {
-    margin-bottom: 30px;
-}
-
-.power-bi-title {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
 }
 
 .power-bi-dashboard iframe {
