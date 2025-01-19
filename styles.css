@@ -8,9 +8,24 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #ffffff, #d6eef5); /* Soft white to light blue gradient */
+    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7E4D0, #F2D7C3); /* Blue to beige gradient */
+    background-size: 300% 300%; /* Smooth animation */
+    animation: moveGradient 30s ease infinite; /* Slow moving gradient */
     color: #333;
     padding: 20px 0;
+}
+
+/* Gradient Animation */
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Main Content Wrapper */
@@ -25,7 +40,7 @@ header {
     background-color: #eef9fd; /* Light blue matching the content background */
     color: #000000; /* Black text for readability */
     padding: 30px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     border-bottom: 2px solid #d1edf7; /* Subtle light blue border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
