@@ -6,14 +6,17 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: 'Georgia', serif; /* Professional serif font */
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #FCE3C5); /* Adjusted gradient (less orange) */
+    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #FCE3C5); /* Blue to soft peach gradient */
     background-size: 300% 300%; /* Smooth animation */
     animation: moveGradient 60s ease infinite; /* Slow moving gradient */
     color: #333;
     padding: 20px 0;
 }
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 /* Gradient Animation */
 @keyframes moveGradient {
@@ -50,28 +53,28 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #ffffff; /* Static light tone */
+    background-color: rgba(255, 255, 255, 0.9); /* Subtle white tone */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #ece9e6; /* Subtle border */
+    border-bottom: 1px solid rgba(220, 220, 220, 0.5); /* Subtle border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
     max-width: 1140px; /* Matches other sections */
     margin: 0 auto 30px; /* Equal margins and spacing */
-    border: 1px solid #ece9e6; /* Matches other sections */
+    border: 1px solid rgba(220, 220, 220, 0.5);
 }
 
 /* Section Styles */
 section {
-    background: linear-gradient(90deg, rgba(245, 242, 240, 0.9), rgba(255, 255, 255, 0.9)); /* Beige to white gradient */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Light beige to white gradient */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveSectionGradient 60s ease infinite; /* Syncs with body gradient */
+    animation: moveSectionGradient 60s ease infinite; /* Syncs with outer background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(200, 200, 180, 0.1); /* Subtle border */
+    border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle beige border */
 }
 
 /* Projects Section */
@@ -82,10 +85,10 @@ section {
 }
 
 .project {
-    background: linear-gradient(90deg, rgba(245, 242, 240, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
     background-size: 300% 300%;
     animation: moveSectionGradient 60s ease infinite; /* Syncs with section gradient */
-    border: 1px solid rgba(200, 200, 180, 0.2); /* Subtle border */
+    border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
@@ -115,8 +118,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(200, 200, 180, 0.2); /* Matches borders */
-    border-left: 1px dashed rgba(200, 200, 180, 0.2);
+    background: rgba(200, 220, 240, 0.2); /* Subtle blue border */
+    border-left: 1px dashed rgba(200, 220, 240, 0.2);
 }
 
 .project .text {
@@ -179,19 +182,19 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed rgba(200, 200, 180, 0.1); /* Matches borders */
+    border-top: 1px dashed rgba(200, 220, 240, 0.2); /* Matches blue borders */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background: linear-gradient(90deg, rgba(245, 242, 240, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
     background-size: 300% 300%;
     animation: moveSectionGradient 60s ease infinite;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(200, 200, 180, 0.2);
+    border: 1px solid rgba(200, 220, 240, 0.2);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -217,11 +220,11 @@ section {
 
 /* Footer */
 footer {
-    background: #fefdfc;
+    background: rgba(255, 250, 245, 0.9); /* Matches header and section tones */
     color: #000000;
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #ece9e6;
+    border-top: 1px solid rgba(220, 220, 220, 0.5);
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
