@@ -8,9 +8,9 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #A0A5A9, #D4D5D6); /* Blue to greyish gradient */
+    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #F9E6D1); /* Blue to peach gradient */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveGradient 30s ease infinite; /* Faster moving gradient */
+    animation: moveGradient 60s ease infinite; /* Slow moving gradient */
     color: #333;
     padding: 20px 0;
 }
@@ -50,7 +50,7 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #fefdfc; /* Static light tone */
+    background-color: #ffffff; /* Static light tone */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
@@ -64,14 +64,14 @@ header {
 
 /* Section Styles */
 section {
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(240, 240, 240, 0.9)); /* Light to soft grey */
+    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Light gradient to white */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveSectionGradient 30s ease infinite; /* Syncs with body gradient */
+    animation: moveSectionGradient 60s ease infinite; /* Syncs with body gradient */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle blue border */
+    border: 1px solid rgba(200, 200, 180, 0.1); /* Subtle border */
 }
 
 /* Projects Section */
@@ -82,10 +82,10 @@ section {
 }
 
 .project {
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(240, 240, 240, 0.9)); /* Matches section gradient */
+    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
     background-size: 300% 300%;
-    animation: moveSectionGradient 30s ease infinite; /* Syncs with section gradient */
-    border: 1px solid rgba(200, 220, 240, 0.2); /* Subtle blue border */
+    animation: moveSectionGradient 60s ease infinite; /* Syncs with section gradient */
+    border: 1px solid rgba(200, 200, 180, 0.2); /* Subtle border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
@@ -115,8 +115,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(200, 220, 240, 0.2); /* Subtle blue border */
-    border-left: 1px dashed rgba(200, 220, 240, 0.2);
+    background: rgba(200, 200, 180, 0.2); /* Matches borders */
+    border-left: 1px dashed rgba(200, 200, 180, 0.2);
 }
 
 .project .text {
@@ -179,19 +179,19 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed rgba(200, 220, 240, 0.2); /* Matches blue borders */
+    border-top: 1px dashed rgba(200, 200, 180, 0.1); /* Matches borders */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(240, 240, 240, 0.9)); /* Matches Projects section */
+    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
     background-size: 300% 300%;
-    animation: moveSectionGradient 30s ease infinite;
+    animation: moveSectionGradient 60s ease infinite;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(200, 220, 240, 0.2);
+    border: 1px solid rgba(200, 200, 180, 0.2);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
