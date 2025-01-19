@@ -8,8 +8,8 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #ffffff, #d6eef5); /* Soft white to light blue gradient */
-    color: #333;
+    background: linear-gradient(to bottom, #ffffff, #f9f6ec); /* Soft white to light beige gradient */
+    color: #333; /* Neutral text color */
     padding: 20px 0;
 }
 
@@ -22,26 +22,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #eef9fd; /* Light blue matching the content background */
+    background-color: #e5f5e0; /* Soft light green */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left; /* Align text to the left */
-    border-bottom: 2px solid #d1edf7; /* Subtle light blue border */
+    border-bottom: 2px solid #cde4cf; /* Neutral green border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
-    margin: 10px auto;
-    max-width: 1200px;
-    border: 1px solid #d1edf7; /* Light blue border */
+    margin: 0 auto 30px; /* Center with equal margins and spacing below */
+    max-width: 1200px; /* Align with the rest of the content */
+    border: 1px solid #cde4cf; /* Green border */
 }
 
 /* Section Styles */
 section {
-    background-color: #ffffff; /* White background for content */
+    background-color: #f9f6ec; /* Light beige background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #dceff7; /* Very light blue border */
+    border: 1px solid #e3dbc7; /* Light neutral border */
 }
 
 /* Projects Section */
@@ -52,8 +52,8 @@ section {
 }
 
 .project {
-    background-color: #ffffff; /* Matches other sections */
-    border: 1px solid #dceff7; /* Very light blue border */
+    background-color: #f5f2e9; /* Soft beige tone */
+    border: 1px solid #e0d7c4; /* Neutral beige border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
@@ -83,8 +83,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #dceff7; /* Matches borders */
-    border-left: 1px dashed #dceff7;
+    background: #e3dbc7; /* Matches borders */
+    border-left: 1px dashed #e3dbc7;
 }
 
 .project .text {
@@ -95,7 +95,7 @@ section {
 .project .links a {
     display: block;
     margin-bottom: 5px;
-    color: #007BFF;
+    color: #006d5b; /* Dark green for links */
     text-decoration: none;
 }
 
@@ -141,17 +141,17 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #dceff7; /* Matches borders */
+    border-top: 1px dashed #e3dbc7; /* Neutral tone border */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #ffffff; /* Matches Projects section */
+    background-color: #f9f6ec; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
-    border: 1px solid #dceff7; /* Matches Projects section border */
+    border: 1px solid #e3dbc7; /* Matches Projects section border */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -177,15 +177,22 @@ section {
 
 /* Footer */
 footer {
-    background: #ffffff; /* Matches header and content sections */
-    color: #000000; /* Black for contrast */
+    background-color: #f9f6ec; /* Matches header and content sections */
+    color: #333; /* Neutral text color */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #dceff7;
+    border-top: 1px solid #e3dbc7;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Buttons and Highlights */
+button, a:hover {
+    background-color: #a7d5ab; /* Calming green hover effect */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove default border */
 }
