@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Palatino font */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Palatino font for body and titles */
     line-height: 1.6;
     background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #FCE3C5); /* Blue to soft peach gradient */
     background-size: 300% 300%; /* Smooth animation */
@@ -50,6 +50,7 @@ main {
 
 /* Header Section - About Me */
 header {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Ensures same font */
     background-color: rgba(255, 255, 255, 0.9); /* Subtle white tone */
     color: #000000; /* Black text for readability */
     padding: 30px;
@@ -125,6 +126,7 @@ section {
 }
 
 .project .text h3 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Ensures same font */
     font-size: 1.2em;
     font-weight: bold;
     color: #333;
@@ -206,6 +208,7 @@ section {
     margin-bottom: 10px;
     font-size: 1.5em;
     font-weight: bold;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Ensures same font */
 }
 
 .power-bi-dashboard iframe {
