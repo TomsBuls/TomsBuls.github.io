@@ -8,8 +8,8 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #ECF0F1, #BDC3C7); /* Light to neutral gradient */
-    color: #2C3E50; /* Darkest shade for text */
+    background: linear-gradient(to bottom, #FFFFFF, #F0F0F0); /* Light minimal gradient */
+    color: #333333; /* Dark gray text */
     padding: 20px 0;
 }
 
@@ -22,26 +22,26 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #ECF0F1; /* Lightest shade */
-    color: #2C3E50; /* Darkest shade for text contrast */
+    background-color: #FFFFFF; /* White background for header */
+    color: #333333; /* Dark text */
     padding: 30px;
     text-align: left;
-    border-bottom: 2px solid #BDC3C7; /* Neutral border */
+    border-bottom: 2px solid #B0B0B0; /* Light gray border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
-    max-width: 1200px; /* Same width as other sections */
-    margin: 0 auto 30px; /* Centered with equal side margins and spacing below */
-    border: 1px solid #BDC3C7; /* Subtle neutral border */
+    max-width: 1200px; /* Matches other sections */
+    margin: 0 auto 30px; /* Equal side margins and spacing below */
+    border: 1px solid #B0B0B0; /* Subtle gray border */
 }
 
 /* Section Styles */
 section {
-    background-color: #ECF0F1; /* Lightest shade for contrast */
+    background-color: #FFFFFF; /* Clean white background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #BDC3C7; /* Neutral border */
+    border: 1px solid #B0B0B0; /* Neutral light gray border */
 }
 
 /* Projects Section */
@@ -54,8 +54,8 @@ section {
 }
 
 .project {
-    background-color: #FFFFFF; /* White background for clarity */
-    border: 1px solid #BDC3C7; /* Neutral border */
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid #B0B0B0; /* Neutral gray border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
@@ -85,8 +85,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #BDC3C7; /* Neutral border */
-    border-left: 1px dashed #BDC3C7;
+    background: #B0B0B0; /* Neutral light gray */
+    border-left: 1px dashed #B0B0B0;
 }
 
 .project .text {
@@ -97,12 +97,12 @@ section {
 .project .links a {
     display: block;
     margin-bottom: 5px;
-    color: #34495E; /* Second darkest shade for links */
+    color: #333333; /* Neutral dark gray for links */
     text-decoration: none;
 }
 
 .project .links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Simple hover effect with no background */
 }
 
 /* Unified Description Font Size */
@@ -110,7 +110,7 @@ section {
 .power-bi-dashboard > p {
     font-size: 0.9em;
     line-height: 1.4;
-    color: #555;
+    color: #707070; /* Mid-gray for paragraph text */
     margin: 0 0 10px;
 }
 
@@ -135,7 +135,7 @@ section {
 }
 
 .project .image:hover img {
-    transform: scale(1.1) translateY(-5px);
+    transform: scale(1.1); /* Slight zoom on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -143,23 +143,23 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed #BDC3C7; /* Neutral border */
+    border-top: 1px dashed #B0B0B0; /* Neutral gray */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #ECF0F1; /* Matches Projects section */
+    background-color: #FFFFFF; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    border: 1px solid #BDC3C7; /* Light neutral border */
+    border: 1px solid #B0B0B0; /* Light gray border */
     max-width: 1200px; /* Same width as header and projects */
     margin-left: auto;
     margin-right: auto;
 }
 
-/.power-bi-dashboard {
+.power-bi-dashboard {
     margin-bottom: 30px;
 }
 
@@ -168,6 +168,7 @@ section {
     margin-bottom: 10px;
     font-size: 1.5em;
     font-weight: bold;
+    color: #333333; /* Neutral dark gray */
 }
 
 .power-bi-dashboard iframe {
@@ -179,11 +180,11 @@ section {
 
 /* Footer */
 footer {
-    background-color: #ECF0F1; /* Match overall theme */
-    color: #2C3E50; /* Neutral text color */
+    background-color: #F0F0F0; /* Light gray background */
+    color: #333333; /* Dark gray text */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #BDC3C7; /* Neutral border */
+    border-top: 1px solid #B0B0B0; /* Neutral gray border */
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
@@ -194,7 +195,6 @@ footer {
 
 /* Buttons and Highlights */
 button, a:hover {
-    background-color: #34495E; /* Darker shade for hover effects */
-    color: #ffffff; /* White text for contrast */
+    color: #707070; /* Mid-gray for hover effects */
     border: none; /* Remove default border */
 }
