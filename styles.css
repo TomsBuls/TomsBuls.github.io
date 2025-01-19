@@ -53,12 +53,12 @@ header {
 section {
     background: linear-gradient(
         90deg,
-        rgba(44, 62, 80, 0.05),
-        rgba(52, 73, 94, 0.05),
-        rgba(127, 140, 141, 0.05),
-        rgba(247, 228, 208, 0.05),
-        rgba(242, 215, 195, 0.05)
-    ); /* Very subtle 5% overlay matching the gradient */
+        rgba(44, 62, 80, 0.1),
+        rgba(52, 73, 94, 0.1),
+        rgba(127, 140, 141, 0.1),
+        rgba(247, 228, 208, 0.1),
+        rgba(242, 215, 195, 0.1)
+    ); /* Subtle overlay matching the gradient */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
@@ -80,11 +80,11 @@ section {
 .project {
     background: linear-gradient(
         90deg,
-        rgba(44, 62, 80, 0.05),
-        rgba(52, 73, 94, 0.05),
-        rgba(127, 140, 141, 0.05),
-        rgba(247, 228, 208, 0.05),
-        rgba(242, 215, 195, 0.05)
+        rgba(44, 62, 80, 0.1),
+        rgba(52, 73, 94, 0.1),
+        rgba(127, 140, 141, 0.1),
+        rgba(247, 228, 208, 0.1),
+        rgba(242, 215, 195, 0.1)
     ); /* Matches subtle overlay */
     border: 1px solid rgba(220, 239, 247, 0.2); /* Very light border */
     border-radius: 8px;
@@ -151,11 +151,11 @@ section {
     padding: 20px;
     background: linear-gradient(
         90deg,
-        rgba(44, 62, 80, 0.05),
-        rgba(52, 73, 94, 0.05),
-        rgba(127, 140, 141, 0.05),
-        rgba(247, 228, 208, 0.05),
-        rgba(242, 215, 195, 0.05)
+        rgba(44, 62, 80, 0.1),
+        rgba(52, 73, 94, 0.1),
+        rgba(127, 140, 141, 0.1),
+        rgba(247, 228, 208, 0.1),
+        rgba(242, 215, 195, 0.1)
     ); /* Matches subtle overlay */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
