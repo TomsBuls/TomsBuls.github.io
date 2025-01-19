@@ -8,8 +8,8 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Consistent font */
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50 50%, #F7CBA9 50%); /* Half blue, half orange static */
-    background-size: cover; /* Ensure full coverage */
+    background: linear-gradient(90deg, #2C3E50 50%, #F7CBA9 50%); /* Static gradient: Half blue, half peach */
+    background-size: cover; /* Ensures full coverage */
     color: #333;
     padding: 20px 0;
 }
