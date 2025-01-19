@@ -8,9 +8,9 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7E4D0, #FCE9D8); /* Blue to beige gradient with reduced orange */
+    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7E4D0, #F2D7C3); /* Blue to beige gradient */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveGradient 45s ease infinite; /* Slowed down animation */
+    animation: moveGradient 30s ease infinite; /* Slow moving gradient */
     color: #333;
     padding: 20px 0;
 }
@@ -57,8 +57,6 @@ section {
     margin-bottom: 30px;
     padding: 20px;
     border: 1px solid #dceff7; /* Very light blue border */
-    margin-left: 10px; /* Adjusted margin for consistency */
-    margin-right: 10px; /* Adjusted margin for consistency */
 }
 
 /* Projects Section */
@@ -66,10 +64,6 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    max-width: 1200px; /* Matches other sections */
-    margin: 0 auto;
-    padding-left: 10px; /* Matches header padding */
-    padding-right: 10px; /* Matches header padding */
 }
 
 .project {
@@ -173,10 +167,9 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
     border: 1px solid #dceff7; /* Matches Projects section border */
-    max-width: 1200px; /* Matches header */
-    margin: 0 auto;
-    padding-left: 10px; /* Matches header padding */
-    padding-right: 10px; /* Matches header padding */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .power-bi-dashboard {
