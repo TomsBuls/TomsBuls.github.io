@@ -8,9 +8,9 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #d6eef5, #eef9fd, #ffffff, #dceff7, #eef9fd); /* Gradient with light blue shades */
+    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #FFE4B5, #FFDAB9); /* Blue to warm beige/sunset tones */
     background-size: 300% 300%; /* For smooth animation */
-    animation: moveGradient 20s ease infinite; /* Moving gradient effect */
+    animation: moveGradient 30s ease infinite; /* Slower moving gradient effect */
     color: #333;
     padding: 20px 0;
 }
@@ -31,8 +31,8 @@ body {
 /* Main Content Wrapper */
 main {
     max-width: 1200px;
-    margin: 0 auto; /* Ensure centered content */
-    padding: 0 20px; /* Add padding */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 20px; /* Add consistent padding */
 }
 
 /* Header Section - About Me */
@@ -45,13 +45,13 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-radius: 8px;
     max-width: 1200px; /* Matches other sections */
-    margin: 0 auto 30px; /* Fixed margins for consistency */
+    margin: 0 auto 30px; /* Equal margins and spacing below */
     border: 1px solid #d1edf7; /* Light blue border */
 }
 
 /* Section Styles */
 section {
-    background-color: #f5fcff; /* Very light blueish-white background */
+    background-color: #f9fafc; /* Very light blueish-white background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
@@ -67,11 +67,11 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     max-width: 1200px; /* Align with other sections */
-    margin: 0 auto; /* Center with equal margins */
+    margin: 0 auto; /* Center horizontally */
 }
 
 .project {
-    background-color: #f5fcff; /* Very light blueish-white background */
+    background-color: #f9fafc; /* Very light blueish-white background */
     border: 1px solid #dceff7; /* Very light blue border */
     border-radius: 8px;
     padding: 40px;
@@ -167,7 +167,7 @@ section {
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #f5fcff; /* Very light blueish-white background */
+    background-color: #f9fafc; /* Very light blueish-white background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
     border: 1px solid #dceff7; /* Matches Projects section border */
