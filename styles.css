@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7E4D0, #F2D7C3); /* Blue to beige gradient */
+    background: linear-gradient(90deg, #2C3E50, #34495E, #85A8B1, #D9EEF7, #E8F7FC); /* Blue to light blue gradient */
     background-size: 300% 300%; /* Smooth animation */
     animation: moveGradient 60s ease infinite; /* Slower moving gradient */
     color: #333;
@@ -37,21 +37,21 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #ffffff; /* Same white tone as Projects and Power BI sections */
+    background-color: #fcf7f3; /* Very light beige */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
-    border-bottom: 1px solid #dceff7; /* Subtle light blue border */
+    border-bottom: 1px solid #e4dedb; /* Subtle beige border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for consistency */
     border-radius: 8px;
     max-width: 1140px; /* Matches other sections */
     margin: 0 auto 30px; /* Equal margins and spacing below */
-    border: 1px solid #dceff7; /* Matches Projects section border */
+    border: 1px solid #e4dedb; /* Matches Projects section border */
 }
 
 /* Section Styles */
 section {
-    background-color: rgba(255, 250, 245, 0.9); /* Lighter beige */
+    background-color: #fcf7f3; /* Very light beige for all sections */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
@@ -67,7 +67,7 @@ section {
 }
 
 .project {
-    background-color: rgba(255, 250, 245, 0.9); /* Matches section light beige tone */
+    background-color: #fcf7f3; /* Matches section light beige tone */
     border: 1px solid rgba(220, 200, 180, 0.2); /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
@@ -108,7 +108,7 @@ section {
 }
 
 .project .text h3 {
-    font-size: 1.2em; /* Reverted to original size */
+    font-size: 1.2em; /* Standardized size */
     font-weight: bold;
     color: #333; /* Darker text for visibility */
 }
@@ -169,7 +169,7 @@ section {
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(255, 250, 245, 0.9); /* Matches Projects section */
+    background-color: #fcf7f3; /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
     border: 1px solid rgba(220, 200, 180, 0.2); /* Matches Projects section border */
@@ -198,11 +198,11 @@ section {
 
 /* Footer */
 footer {
-    background: #ffffff; /* Matches header and content sections */
+    background: #fcf7f3; /* Matches header and content sections */
     color: #000000; /* Black for contrast */
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #dceff7;
+    border-top: 1px solid #e4dedb;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
