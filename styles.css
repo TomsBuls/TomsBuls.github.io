@@ -6,9 +6,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: 'Georgia', serif; /* Updated to a serif font */
+    font-family: 'Georgia', serif; /* Professional serif font */
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #F9E6D1); /* Blue to peach gradient */
+    background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7CBA9, #FCE3C5); /* Adjusted gradient (less orange) */
     background-size: 300% 300%; /* Smooth animation */
     animation: moveGradient 60s ease infinite; /* Slow moving gradient */
     color: #333;
@@ -64,7 +64,7 @@ header {
 
 /* Section Styles */
 section {
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Light gradient to white */
+    background: linear-gradient(90deg, rgba(245, 242, 240, 0.9), rgba(255, 255, 255, 0.9)); /* Beige to white gradient */
     background-size: 300% 300%; /* Smooth animation */
     animation: moveSectionGradient 60s ease infinite; /* Syncs with body gradient */
     border-radius: 8px;
@@ -82,7 +82,7 @@ section {
 }
 
 .project {
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
+    background: linear-gradient(90deg, rgba(245, 242, 240, 0.9), rgba(255, 255, 255, 0.9)); /* Matches section gradient */
     background-size: 300% 300%;
     animation: moveSectionGradient 60s ease infinite; /* Syncs with section gradient */
     border: 1px solid rgba(200, 200, 180, 0.2); /* Subtle border */
@@ -186,7 +186,7 @@ section {
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background: linear-gradient(90deg, rgba(245, 248, 250, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
+    background: linear-gradient(90deg, rgba(245, 242, 240, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
     background-size: 300% 300%;
     animation: moveSectionGradient 60s ease infinite;
     border-radius: 8px;
