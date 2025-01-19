@@ -28,6 +28,19 @@ body {
     }
 }
 
+/* Section Gradient Animation */
+@keyframes moveSectionGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Main Content Wrapper */
 main {
     max-width: 1200px;
@@ -37,7 +50,7 @@ main {
 
 /* Header Section - About Me */
 header {
-    background-color: #fefdfc; /* Lighter beige tone */
+    background-color: #fefdfc; /* Static lighter beige tone */
     color: #000000; /* Black text for readability */
     padding: 30px;
     text-align: left;
@@ -51,7 +64,9 @@ header {
 
 /* Section Styles */
 section {
-    background-color: #fefdfc; /* Lighter beige */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Beige to white gradient */
+    background-size: 300% 300%; /* Smooth animation */
+    animation: moveSectionGradient 60s ease infinite; /* Syncs with body gradient */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
@@ -67,7 +82,9 @@ section {
 }
 
 .project {
-    background-color: #fefdfc; /* Matches section light beige tone */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Beige to white gradient */
+    background-size: 300% 300%;
+    animation: moveSectionGradient 60s ease infinite; /* Syncs with section gradient */
     border: 1px solid rgba(220, 200, 180, 0.15); /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
@@ -169,7 +186,9 @@ section {
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #fefdfc; /* Matches Projects section */
+    background: linear-gradient(90deg, rgba(255, 250, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Matches Projects section */
+    background-size: 300% 300%;
+    animation: moveSectionGradient 60s ease infinite; /* Syncs with section gradient */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
     border: 1px solid rgba(220, 200, 180, 0.1); /* Matches Projects section border */
