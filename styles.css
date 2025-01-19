@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     background: linear-gradient(90deg, #2C3E50, #34495E, #7F8C8D, #F7E4D0, #F2D7C3); /* Blue to beige gradient */
     background-size: 300% 300%; /* Smooth animation */
-    animation: moveGradient 30s ease infinite; /* Slow moving gradient */
+    animation: moveGradient 60s ease infinite; /* Slower moving gradient */
     color: #333;
     padding: 20px 0;
 }
@@ -51,12 +51,12 @@ header {
 
 /* Section Styles */
 section {
-    background-color: #fdf8f5; /* Subtle light beige */
+    background-color: rgba(255, 250, 245, 0.9); /* Lighter beige */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for a clean look */
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid rgba(220, 200, 180, 0.2); /* Light beige border */
+    border: 1px solid rgba(220, 200, 180, 0.15); /* Very subtle beige border */
 }
 
 /* Projects Section */
@@ -67,8 +67,8 @@ section {
 }
 
 .project {
-    background-color: #fdf8f5; /* Matches section light beige tone */
-    border: 1px solid rgba(220, 200, 180, 0.3); /* Subtle beige border */
+    background-color: rgba(255, 250, 245, 0.9); /* Matches section light beige tone */
+    border: 1px solid rgba(220, 200, 180, 0.2); /* Subtle beige border */
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
@@ -98,8 +98,8 @@ section {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: rgba(220, 200, 180, 0.2); /* Matches beige borders */
-    border-left: 1px dashed rgba(220, 200, 180, 0.2);
+    background: rgba(220, 200, 180, 0.1); /* Matches beige borders */
+    border-left: 1px dashed rgba(220, 200, 180, 0.1);
 }
 
 .project .text {
@@ -108,7 +108,7 @@ section {
 }
 
 .project .text h3 {
-    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-size: 1.2em; /* Reverted to original size */
     font-weight: bold;
     color: #333; /* Darker text for visibility */
 }
@@ -162,14 +162,14 @@ section {
 .horizontal {
     width: 90%;
     margin: 20px 0;
-    border-top: 1px dashed rgba(220, 200, 180, 0.2); /* Matches beige borders */
+    border-top: 1px dashed rgba(220, 200, 180, 0.1); /* Matches beige borders */
 }
 
 /* Power BI Section */
 .power-bi-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #fdf8f5; /* Matches Projects section */
+    background-color: rgba(255, 250, 245, 0.9); /* Matches Projects section */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for uniformity */
     border: 1px solid rgba(220, 200, 180, 0.2); /* Matches Projects section border */
