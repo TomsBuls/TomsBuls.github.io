@@ -33,6 +33,7 @@ header {
     max-width: 1140px;
     margin: 0 auto 30px;
     border: 1px solid rgba(200, 220, 240, 0.2);
+    line-height: 2; /* Increase spacing inside the header */
 }
 
 /* Section Styles */
