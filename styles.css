@@ -96,7 +96,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(200, 220, 240, 0.2);
+    background: none; 
     border-radius: 4px;
     font-size: 0.9em;
     color: #555;
