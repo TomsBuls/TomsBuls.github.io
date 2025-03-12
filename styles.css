@@ -127,6 +127,17 @@ section {
     text-decoration: none;
 }
 
+/* Disabled Links (Non-Clickable Notebook Links) */
+.project .links .disabled-link {
+    color: #007BFF; /* Keep the same color as active links */
+    font-size: 0.9em;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block; /* Ensures each appears on a new line */
+    pointer-events: none; /* Disables clickability */
+    cursor: default; /* Removes hover click indication */
+}
+
 .project .links a:hover {
     text-decoration: underline;
 }
