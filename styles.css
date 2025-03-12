@@ -81,11 +81,27 @@ section {
 }
 
 .gpt2-image {
-    width: 30%; /* Less space for image, reserved for future additions */
+    width: 30%;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    justify-content: space-between; /* Spaces out top and bottom sections */
+    height: 100%;
+}
+
+.gpt2-output-top,
+.gpt2-output-bottom {
+    width: 100%;
+    height: 48%; /* Split into two equal sections */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    background: rgba(200, 220, 240, 0.2); /* Light background */
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    padding: 10px;
 }
 
 /* Standard Project Layout (50% Text, 50% Image) */
