@@ -1,133 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
-    <!-- About Me Section -->
-    <h2>
-        <strong>TOMS BULS</strong> 
-        <span style="font-weight: normal;">| Data Science & Analytics Professional</span>
-        <span style="font-weight: normal;">|</span>
-        <a href="https://www.linkedin.com/in/tomsbuls/" target="_blank" style="text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
-                 alt="LinkedIn" 
-                 style="width: 18px; height: 18px; vertical-align: middle;">
-        </a>
-    </h2>
-    <p>
-        With proficiency in SQL, Python, R, and Power BI, I specialize in statistical analysis, machine learning, and creating intuitive visualizations to uncover actionable insights. My background in computer science and economics enhances my ability to solve complex, data-driven challenges.
-    </p>
+<!-- About Me Section -->
+<h2>
+<strong>TOMS BULS</strong>
+<span style="font-weight: normal;">| Data Science & Analytics Professional</span>
+<span style="font-weight: normal;">|</span>
+<a href="https://www.linkedin.com/in/tomsbuls/" target="_blank" style="text-decoration: none;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+alt="LinkedIn"
+style="width: 18px; height: 18px; vertical-align: middle;">
+</a>
+</h2>
+<p>
+With proficiency in SQL, Python, R, and Power BI, I specialize in statistical analysis, machine learning, and creating intuitive visualizations to uncover actionable insights. My background in computer science and economics enhances my ability to solve complex, data-driven challenges.
+</p>
 </header>
-    <main>
-        <!-- Projects Section -->
-        <section class="projects">
-            <!-- BERT Project -->
-            <div class="project full-width">
-                <div class="content">
-                    <!-- Left Side -->
-                    <div class="text">
-                        <h3>Transformers Architecture for Tweet Classification: Analysing Public Sentiment in Latvia Post-2022 Elections</h3>
-                        <div class="horizontal"></div>
-                        <div class="description">
-                            <p>
-                                This project developed a semantic sentiment analysis model using the BERT architecture to classify public sentiment. A dataset of over 10,000 tweets, curated following the Autumn 2022 Latvian government elections, was manually annotated for supervised learning. The work involved preprocessing steps such as cleaning, tokenization, lemmatization (reducing words to their base forms), and embedding word vectors. The model’s performance was compared against baseline classifiers like Naive Bayes (NB) and Support Vector Machines (SVM).
-                            </p>
-                        </div>
-                        <div class="horizontal"></div>
-                        <div class="links">
-                            <a href="projects/BERT_sentiment/Preprocessing.html">Data Preprocessing</a>
-                            <a href="projects/BERT_sentiment/Baseline_Classifiers.html">Baseline Classifiers</a>
-                            <a href="projects/BERT_sentiment/BERT_model.html">BERT Model</a>
-                        </div>
-                    </div>
-                    <!-- Right Side -->
-                    <div class="image">
-                        <a href="projects/BERT_sentiment/Baseline_Classifiers.html">
-                            <img src="projects/BERT_sentiment/sentiment_tweets.png" alt="Sentiment Tweets Chart">
-                        </a>
-                    </div>
+<main>
+<!-- Projects Section -->
+<section class="projects">
+    
+    <!-- GPT-2 Project (New) -->
+    <div class="project full-width gpt2-project">
+        <div class="content">
+            <!-- Left Side - Text (70%) -->
+            <div class="text gpt2-text">
+                <h3>Implementing GPT-2 Architecture from Scratch</h3>
+                <div class="horizontal"></div>
+                <div class="description">
+                    <p>
+                        In this project, I built a GPT-2 equivalent model from scratch, implementing the decoder-only Transformer architecture manually, including multi-head self-attention, feedforward layers, layer normalization, and residual connections. Instead of relying on pre-built Transformer modules, I defined the embedding layers, positional encodings, attention mechanisms, and training pipeline manually to optimize model design. The model is trained on OpenWebText, a large-scale dataset containing over 8 million documents (~40GB in size) for next-token prediction. Dataset streaming was implemented to process data efficiently without loading it entirely into memory, reducing computational overhead and storage constraints.
+                    </p>
+                    <p>
+                        The model features 12 Transformer layers, 12 attention heads, a 1024-dimensional feedforward network, and dropout for regularization. With **124M parameters (same as GPT-2)**, it balances efficiency and performance, utilizing a shorter context length (128 vs. 1024 tokens). For text generation, I applied temperature scaling (1.0) and top-k sampling (k=10) to enhance fluency and coherence while maintaining diversity in output.
+                    </p>
+                    <p>
+                        I trained the model on an **NVIDIA A100 GPU** for **100,000 steps**, using a batch size of 48 with gradient accumulation to manage memory constraints. Optimization techniques included AdamW, gradient clipping, learning rate warmup (2000 steps), and cosine decay scheduling. Training checkpoints were saved every 1000 steps to preserve progress and allow resumption in case of interruptions.
+                    </p>
                 </div>
             </div>
+            <!-- Right Side - Placeholder for Future Outputs (30%) -->
+            <div class="image gpt2-image">
+                <!-- Placeholder Image or Empty Space for Future Outputs -->
+            </div>
+        </div>
+    </div>
 
-            <!-- E-Commerce Analysis -->
-            <div class="project half-width">
-                <div class="content">
-                    <!-- Left Side -->
-                    <div class="text">
-                        <h3>E-Commerce Analysis</h3>
-                        <div class="horizontal"></div>
-                        <div class="description">
-                            <p>
-                                This notebook analyzes data from Olist, Brazil's largest e-commerce platform, using various datasets about customers, orders, products, sellers, and their geolocations. It examines delivery efficiency and customer satisfaction, leveraging location data to uncover regional trends and performance insights.
-                            </p>
-                        </div>
-                        <div class="horizontal"></div>
-                        <div class="links">
-                            <a href="projects/e-commerce/e_commerce.html">E-Commerce Notebook</a>
-                        </div>
-                    </div>
-                    <!-- Right Side -->
-                    <div class="image">
-                        <a href="projects/e-commerce/e_commerce.html">
-                            <img src="projects/e-commerce/e-commerce_chart.png" alt="E-Commerce Chart">
-                        </a>
-                    </div>
+    <!-- BERT Project -->
+    <div class="project full-width">
+        <div class="content">
+            <div class="text">
+                <h3>Transformers Architecture for Tweet Classification: Analyzing Public Sentiment in Latvia Post-2022 Elections</h3>
+                <div class="horizontal"></div>
+                <div class="description">
+                    <p>
+                        This project developed a semantic sentiment analysis model using the BERT architecture to classify public sentiment. A dataset of over 10,000 tweets, curated following the Autumn 2022 Latvian government elections, was manually annotated for supervised learning. The work involved preprocessing steps such as cleaning, tokenization, lemmatization (reducing words to their base forms), and embedding word vectors. The model’s performance was compared against baseline classifiers like Naive Bayes (NB) and Support Vector Machines (SVM).
+                    </p>
+                </div>
+                <div class="horizontal"></div>
+                <div class="links">
+                    <a href="projects/BERT_sentiment/Preprocessing.html">Data Preprocessing</a>
+                    <a href="projects/BERT_sentiment/Baseline_Classifiers.html">Baseline Classifiers</a>
+                    <a href="projects/BERT_sentiment/BERT_model.html">BERT Model</a>
                 </div>
             </div>
+            <div class="image">
+                <a href="projects/BERT_sentiment/Baseline_Classifiers.html">
+                    <img src="projects/BERT_sentiment/sentiment_tweets.png" alt="Sentiment Tweets Chart">
+                </a>
+            </div>
+        </div>
+    </div>
 
-            <!-- Covid-19 Analysis -->
-            <div class="project half-width">
-                <div class="content">
-                    <!-- Left Side -->
-                    <div class="text">
-                        <h3>Covid-19 Analysis</h3>
-                        <div class="horizontal"></div>
-                        <div class="description">
-                            <p>
-                                This project analyzes daily COVID-19 incidence and vaccination data to uncover trends and patterns. Using deep learning models—RNN, LSTM, BiLSTM, and GRU—it forecasts future incidence and compares model performance, providing insights into the pandemic's progression.
-                            </p>
-                        </div>
-                        <div class="horizontal"></div>
-                        <div class="links">
-                            <a href="projects/covid/covid_final.html">Covid Latvia Analysis Notebook</a>
-                        </div>
-                    </div>
-                    <!-- Right Side -->
-                    <div class="image">
-                        <a href="projects/covid/covid_final.html">
-                            <img src="projects/covid/covid_chart.png" alt="Covid Analysis Chart">
-                        </a>
-                    </div>
+    <!-- E-Commerce Analysis -->
+    <div class="project half-width">
+        <div class="content">
+            <div class="text">
+                <h3>E-Commerce Analysis</h3>
+                <div class="horizontal"></div>
+                <div class="description">
+                    <p>
+                        This notebook analyzes data from Olist, Brazil's largest e-commerce platform, using various datasets about customers, orders, products, sellers, and their geolocations. It examines delivery efficiency and customer satisfaction, leveraging location data to uncover regional trends and performance insights.
+                    </p>
+                </div>
+                <div class="horizontal"></div>
+                <div class="links">
+                    <a href="projects/e-commerce/e_commerce.html">E-Commerce Notebook</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Power BI Section -->
-        <section class="power-bi-section">
-            <h2>Power BI Dashboards</h2>
-
-            <div class="power-bi-dashboard">
-                <h3>Short Term Labor Market Forecasts</h3>
-                <p>This Power BI report presents insights from short-term labor market forecasts, detailing projected vacancy trends across regions and economic sectors. The forecasts are based on detailed regional-level data on vacancies and highlight two key components: replacement demand, driven by workforce turnover, and growth-driven demand, resulting from sectoral expansion.</p>
-                <iframe title="28_11_prognozes_eng" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiOGY5ZDlmYjItMjkwOC00ZGVjLWFlYjItMTQ2MDEzNGIwYTcyIiwidCI6ImQ3NzZmZWE1LTdmOGYtNDQ0ZC1hYjRlLTVjZmZjMDg5OTVmMSIsImMiOjl9&pageName=ReportSectioneb95952b822552e2a181" frameborder="0" allowFullScreen="true"></iframe>
+            <div class="image">
+                <a href="projects/e-commerce/e_commerce.html">
+                    <img src="projects/e-commerce/e-commerce_chart.png" alt="E-Commerce Chart">
+                </a>
             </div>
+        </div>
+    </div>
 
-            <div class="power-bi-dashboard">
-                <h3>Budget Revenues and Expenditures</h3>
-                <p>This Power BI report visualizes a decade (2010–2020) of detailed State Treasury budget data, encompassing five key budgets: the central government budget, the state special budget, the local government general budget, the local government special budget, and municipal donations and grants. Over 600 monthly files were extracted and processed using a custom script, handling granular hierarchical classifications of revenues and expenditures across 5–6 levels. The report enables interactive analysis of budgetary trends and insights.</p>
-                <iframe title="VALSTS_BUDZETS_report1" 
-                        src="https://app.powerbi.com/view?r=eyJrIjoiMGIxMDkyODAtZWU2MS00OTU2LTk1NGEtMDRlZmE5MmYyNDhkIiwidCI6ImQ3NzZmZWE1LTdmOGYtNDQ0ZC1hYjRlLTVjZmZjMDg5OTVmMSIsImMiOjl9&pageName=ReportSection" 
-                        allowFullScreen="true"></iframe>
+    <!-- Covid-19 Analysis -->
+    <div class="project half-width">
+        <div class="content">
+            <div class="text">
+                <h3>Covid-19 Analysis</h3>
+                <div class="horizontal"></div>
+                <div class="description">
+                    <p>
+                        This project analyzes daily COVID-19 incidence and vaccination data to uncover trends and patterns. Using deep learning models—RNN, LSTM, BiLSTM, and GRU—it forecasts future incidence and compares model performance, providing insights into the pandemic's progression.
+                    </p>
+                </div>
+                <div class="horizontal"></div>
+                <div class="links">
+                    <a href="projects/covid/covid_final.html">Covid Latvia Analysis Notebook</a>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 TomsBuls</p>
-    </footer>
+            <div class="image">
+                <a href="projects/covid/covid_final.html">
+                    <img src="projects/covid/covid_chart.png" alt="Covid Analysis Chart">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+</main>
+<footer>
+<p>&copy; 2025 Toms Buls</p>
+</footer>
 </body>
 </html>
