@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notebook Conversion</title>
+<style>
+        /* Basic reset for the body */
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Center and scale the entire notebook */
+        div#notebook-container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Styling for the title */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Styling for Heading 2 (Markdown ## Tokenization will become an <h2>) */
+        div#notebook-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-transform: capitalize; /* Capitalize text */
+        }
+
+        /* Styling for blockquotes (Markdown > Blockquotes will become <blockquote>) */
+        div#notebook-container blockquote {
+            font-size: 18px;
+            font-style: italic;
+            color: #777;
+            border-left: 4px solid #2c3e50;
+            padding-left: 20px;
+            margin-left: 0;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Code cell styling */
+        div.input {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: "Courier New", Courier, monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+
+        /* Output area styling */
+        div.output_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        /* Styling for output text */
+        div.output_text pre {
+            text-align: center;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-width: 90%;
+        }
+
+        /* Ensure charts and images scale dynamically */
+        div.output_png, div.output_svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Toggle button for hiding/showing code */
+        .toggle-code-btn {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .toggle-code-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div id="notebook-container">
+<div style="font-family: Arial, sans-serif; max-width: 90%; margin: 0 auto;">
+<h1 style="text-align: center; color: #2c3e50;">Building GPT-2 Model from Scratch</h1>
+<p style="text-align: center; font-style: italic; color: #555; margin-bottom: 30px;">
+        In this project, I built a GPT-2 equivalent model from scratch, defining the decoder-only Transformer architecture manually, including multi-head self-attention, feedforward layers, layer normalization, and residual connections. The model was trained on OpenWebText, a large-scale dataset with over 8 million documents (~40GB, ~100M samples) for next-token prediction. To handle its size efficiently, I used dataset streaming, enabling real-time processing without loading everything into memory. The model was trained for 100,000 steps to achieve high-quality text generation.
+    </p>
+<p style="text-align: center; font-style: italic; color: #555; margin-bottom: 30px;">
+        The model features 12 Transformer layers with 12 attention heads, a 1024-dimensional feedforward network, and a dropout of 0.1 for regularization. It processes sequences of 128 tokens using 768-dimensional embeddings and learnable positional encodings, with a vocabulary of 50,257 tokens—matching GPT-2’s tokenizer. With 124M parameters, the same as GPT-2, it balances efficiency and performance, using a shorter context length (128 vs. 1024) and optimized hyperparameters. For text generation, I applied temperature scaling (1.0) and top-k sampling (k=10).
+    </p>
+<p style="text-align: center; font-style: italic; color: #555; margin-bottom: 30px;">
+        I trained the model on a single NVIDIA A100 GPU, using a batch size of 48 with gradient accumulation to manage memory constraints. The optimizer is AdamW with a learning rate of 3e-4, and I implemented gradient clipping with a max norm of 1.0 to prevent instability. The learning rate follows a warmup schedule for the first 2000 steps, then transitions to cosine decay for smoother convergence. To ensure training progress is preserved, I added model checkpointing every 1000 steps, allowing resumption in case of interruptions. These optimizations maximized efficiency, enabling the model to generate high-quality, structured text with remarkable fluency.
+    </p>
+<div class="content">
+<!-- Render markdown, code cells, and outputs -->
+<div class="code-cell">
+<div class="input">
+<pre>import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import math
+import time
+import os
+from torch.utils.data import DataLoader
+from datasets import load_dataset
+import tiktoken
+import csv
+
+# Display device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+
+torch.cuda.empty_cache()</pre>
+</div>
+</div>
+<div class="markdown-cell">
+<div class="text-cell">
+                            
+
+For tokenization, I used the pre-built GPT-2 tokenizer from tiktoken. GPT-2’s tokenizer is based on Byte-Pair Encoding (BPE), which efficiently compresses text while preserving meaning. This tokenizer was trained on large-scale web data, making it well-suited for processing natural language efficiently. Using tiktoken.get_encoding("gpt2"), I can quickly convert text into token IDs compatible with transformer models.
+
+
+                        </div>
+</div>
+<div class="code-cell">
+<div class="input">
+<pre># ------------------- TOKENIZATION -------------------
+tokenizer = tiktoken.get_encoding("gpt2")
+
+def encode_text(text):
+    return torch.tensor(tokenizer.encode(text), dtype=torch.long)</pre>
+</div>
+</div>
+<div class="markdown-cell">
+<div class="text-cell">
+                            I implemented a custom IterableDataset to stream data from the OpenWebText dataset. Instead of loading everything into memory, this approach processes data on the fly, making it more efficient for large datasets. The dataset is read line by line, each line is tokenized, and then split into fixed-length sequences (seq_length). These sequences form input-output training pairs, where the model learns to predict the next token in a given sequence.
+
+To ensure training can resume from the last saved position, progress is tracked using a token offset. This offset is calculated based on the number of training steps completed, the sequence length, and the batch size. When resuming, the dataset skips ahead by counting tokens until it reaches the saved position. This guarantees that no data is repeated or skipped, maintaining training continuity.
+
+The dataset is processed in segments of seq_length tokens at a time, ensuring that all available text contributes to training. Validation data is handled dynamically by assigning a portion of the dataset to validation at regular intervals.
+
+
+                        </div>
+</div>
+<div class="code-cell">
+<div class="input">
+<pre># ------------------- STREAMING DATASET -------------------
+class OpenWebTextDataset(torch.utils.data.IterableDataset):
+    def __init__(self, seq_length=128, batch_size=48, is_validation=False, val_ratio=0.1, resume_step=0):
+        self.dataset = load_dataset("Skylion007/openwebtext", split="train", streaming=True, trust_remote_code=True)
+        self.seq_length = seq_length
+        self.batch_size = batch_size
+        self.is_validation = is_validation
+        self.val_ratio = val_ratio
+        self.resume_step = resume_step
+        self.token_offset = resume_step * seq_length * batch_size
+
+    def __iter__(self):
+        current_token_count = 0  # Track token count as we iterate through the dataset
+        for i, sample in enumerate(self.dataset):
+            if self.is_validation and i % int(1 / self.val_ratio) != 0:
+                continue
+            elif not self.is_validation and i % int(1 / self.val_ratio) == 0:
+                continue
+
+            # Tokenize the line and calculate its length
+            tokenized_line = encode_text(sample["text"])
+            line_length = len(tokenized_line)
+
+            # Skip ahead if we're past the resume point
+            if current_token_count + line_length &lt; self.token_offset:
+                current_token_count += line_length
+                continue  # Skip this line,  we're not at the resume position yet
+
+            # Once we reach the resume position, start yielding data
+            for i in range(0, line_length - self.seq_length, self.seq_length):
+                X = tokenized_line[i : i + self.seq_length]
+                Y = tokenized_line[i + 1 : i + self.seq_length + 1]
+                yield X, Y
+
+                current_token_count += self.seq_length</pre>
+</div>
+</div>
+<div class="markdown-cell">
+<div class="text-cell">
+                            The model architecture consists of a Transformer Decoder built from 12 stacked Transformer Decoder layers. At the key of each layer is the Causal Self-Attention mechanism, which enables the model to process input in an autoregressive manner. The mechanism uses 12 attention heads operating in a hidden dimension of 768, ensuring that each token only attends to previous tokens in the sequence through causal masking. After the attention mechanism, the output is passed through a Feed-Forward Neural Network (FFN), which has two linear layers where the data is first projected to a higher-dimensional space (1024 hidden units) and then returned to the original dimension of 768. Both the attention and FFN blocks are equipped with residual connections to maintain the flow of information and stabilize training.
+
+Each Transformer Decoder layer follows this structure: first, Layer Normalization is applied to the input of the Causal Self-Attention, followed by the attention mechanism itself, with a residual connection added to the output. Layer Normalization is then applied to the attention output before being passed through the Feed-Forward Neural Network. After the FFN, another residual connection is applied, and Layer Normalization is applied again to the final output of the layer. The stacking of 12 such layers allows the model to learn increasingly complex representations of the input, enabling high-quality text generation.
+                        </div>
+</div>
+<div class="code-cell">
+<div class="input">
+<pre># ------------------- MODEL COMPONENTS -------------------
+class LayerNorm(nn.Module):
+    def __init__(self, ndim, bias=True):
+        super().__init__()
+        self.weight = nn.Parameter(torch.ones(ndim))
+        self.bias = nn.Parameter(torch.zeros(ndim)) if bias else None
+
+    def forward(self, input):
+        return F.layer_norm(input, self.weight.shape, self.weight, self.bias, 1e-5)
+
+class CausalSelfAttention(nn.Module):
+    def __init__(self, d_model, num_heads, dropout=0.1):
+        super().__init__()
+        assert d_model % num_heads == 0
+        self.num_heads = num_heads
+        self.head_dim = d_model // num_heads
+
+        self.qkv_proj = nn.Linear(d_model, 3 * d_model, bias=False)
+        self.out_proj = nn.Linear(d_model, d_model, bias=False)
+        self.dropout = nn.Dropout(dropout)
+
+        self.register_buffer("bias", torch.tril(torch.ones(128, 128)).view(1, 1, 128, 128))
+
+    def forward(self, x):
+        B, T, C = x.size()
+        q, k, v = self.qkv_proj(x).chunk(3, dim=-1)
+
+        q = q.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        k = k.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        v = v.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+
+        att = (q @ k.transpose(-2, -1)) * (1.0 / math.sqrt(self.head_dim))
+        att = att.masked_fill(self.bias[:, :, :T, :T] == 0, float('-inf'))
+        att = F.softmax(att, dim=-1)
+        att = self.dropout(att)
+
+        y = att @ v
+        y = y.transpose(1, 2).contiguous().view(B, T, C)
+        return self.out_proj(y)
+
+class TransformerBlock(nn.Module):
+    def __init__(self, d_model, num_heads, hidden_dim, dropout=0.2):
+        super().__init__()
+        self.ln_1 = LayerNorm(d_model)
+        self.attn = CausalSelfAttention(d_model, num_heads, dropout)
+        self.ln_2 = LayerNorm(d_model)
+        self.mlp = nn.Sequential(
+            nn.Linear(d_model, hidden_dim),
+            nn.GELU(),
+            nn.Linear(hidden_dim, d_model),
+            nn.Dropout(dropout)
+        )
+
+    def forward(self, x):
+        x = x + self.attn(self.ln_1(x))
+        x = x + self.mlp(self.ln_2(x))
+        return x
+
+class TransformerDecoder(nn.Module):
+    def __init__(self, d_model, num_heads, hidden_dim, num_layers, vocab_size, max_seq_length):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, d_model)
+        self.pos_embedding = nn.Embedding(max_seq_length, d_model)
+        self.layers = nn.ModuleList([TransformerBlock(d_model, num_heads, hidden_dim) for _ in range(num_layers)])
+        self.ln_f = LayerNorm(d_model)
+        self.output_layer = nn.Linear(d_model, vocab_size, bias=False)
+
+    def forward(self, x):
+        positions = torch.arange(0, x.shape[1], dtype=torch.long, device=x.device).unsqueeze(0)
+        x = self.embedding(x) + self.pos_embedding(positions)
+        for layer in self.layers:
+            x = layer(x)
+        return self.output_layer(self.ln_f(x))
+
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens=50, temperature=1.0, top_k=40):
+        for _ in range(max_new_tokens):
+            logits = self(idx)[:, -1, :] / temperature
+            top_logits, top_indices = torch.topk(logits, k=top_k, dim=-1)
+            probs = F.softmax(top_logits, dim=-1)
+            next_token_idx = torch.multinomial(probs, num_samples=1)
+            next_token = top_indices.gather(-1, next_token_idx)
+            idx = torch.cat([idx, next_token], dim=1)
+        return tokenizer.decode(idx.squeeze().tolist())</pre>
+</div>
+</div>
+<div class="markdown-cell">
+<div class="text-cell">
+                            The training setup initializes the Transformer Decoder model with 12 layers, each having a hidden size of 768 and 12 attention heads. The model processes sequences up to 128 tokens from a vocabulary of 50,257 words. The optimizer used is AdamW with a learning rate of 3e-4, β parameters (0.9, 0.98), and a weight decay of 0.01. A cosine annealing scheduler with a decay period of 5000 steps adjusts the learning rate dynamically.
+                        </div>
+</div>
+<div class="code-cell">
+<div class="input">
+<pre># ------------------- TRAINING SETUP -------------------
+d_model = 768
+num_heads = 12
+hidden_dim = 1024
+num_layers = 12
+vocab_size = 50257
+max_seq_length = 128
+batch_size = 48
+
+model = TransformerDecoder(d_model, num_heads, hidden_dim, num_layers, vocab_size, max_seq_length).to(device)
+
+optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4, betas=(0.9, 0.98), weight_decay=1e-2)
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=5000)
+criterion = nn.CrossEntropyLoss()</pre>
+</div>
+</div>
+<div class="code-cell">
+<div class="input">
+<pre># ------------------- CHECKPOINTING -------------------
+checkpoint_path = "checkpoint.pth"
+start_epoch, global_step = 0, 0
+
+# Load checkpoint if exists
+if os.path.exists(checkpoint_path):
+    print("Loading checkpoint...")
+    checkpoint = torch.load(checkpoint_path)
+    model.load_state_dict(checkpoint["model_state"])
+    optimizer.load_state_dict(checkpoint["optimizer_state"])
+    scheduler.load_state_dict(checkpoint["scheduler_state"])
+    start_epoch = checkpoint["epoch"]
+    global_step = checkpoint["step"]
+    print(f"Resuming from epoch {start_epoch}, step {global_step}...")
+else:
+    print("No checkpoint found. Starting from scratch.")</pre>
+</div>
+</div>
+<div class="markdown-cell">
+<div class="text-cell">
+                            The training loop runs for multiple epochs, resuming from a checkpoint if available. It processes batches of data, computes loss, applies backpropagation with gradient clipping, and updates parameters using AdamW with a cosine annealing scheduler
+
+Training loss is logged every 100 steps, validation loss is computed every 100 steps on a subset of batches, and text generation occurs every 500 steps. Checkpoints are saved every 500 steps and at the end of training to allow resumption.
+                        </div>
+</div>
+<div class="code-cell">
+<div class="input">
+<pre># ------------------- TRAINING LOOP -------------------
+# Define CSV paths
+train_loss_csv = 'training_losses.csv'
+val_loss_csv = 'validation_losses.csv'
+
+# Lists to store metrics for later use (e.g., for plotting)
+train_losses = []
+val_losses = []
+
+# Function to write headers if the file doesn't already exist
+def write_csv_headers(file_path, headers):
+    if not os.path.exists(file_path):  # Check if the file exists
+        with open(file_path, 'w', newline='') as f:  # Open in write mode ('w')
+            writer = csv.writer(f)
+            writer.writerow(headers)  # Write the headers to the CSV file
+
+# Write headers to the CSV files only if the file doesn't exist
+write_csv_headers(train_loss_csv, ['Step', 'Train Loss'])
+write_csv_headers(val_loss_csv, ['Step', 'Validation Loss'])
+
+# Training loop
+num_epochs = 5
+print_interval = 100
+gen_interval = 500
+val_interval = 100
+save_interval = 500
+
+for epoch in range(start_epoch, num_epochs):
+    total_train_loss = 0
+    total_val_loss = 0
+    start_time = time.time()
+    step_start_time = time.time()  # Track time for each 100 steps
+
+    # Pass resume_step from checkpoint to dataset
+    train_loader = DataLoader(OpenWebTextDataset(seq_length=max_seq_length, batch_size=batch_size, resume_step=global_step), batch_size=batch_size)
+    val_loader = DataLoader(OpenWebTextDataset(seq_length=max_seq_length, is_validation=True, resume_step=global_step), batch_size=16)
+
+    # Print inputs and targets as text from the first batch
+    for step, (src, tgt) in enumerate(train_loader):
+        # Decode the input tokens (src) back to text
+        input_text = tokenizer.decode(src[0].tolist())  # Only print the first example in the batch
+        target_text = tokenizer.decode(tgt[0].tolist())  # Only print the first example in the batch
+
+        print("\nFirst batch input text (src):")
+        print(input_text)
+
+        print("\nFirst batch target text (tgt):")
+        print(target_text)
+
+        break  # Only print for the first batch and then stop
+
+    # Train Loop
+    for step, (src, tgt) in enumerate(train_loader, start=global_step + 1):
+        src, tgt = src.to(device), tgt.to(device)
+        optimizer.zero_grad()
+
+        logits = model(src)
+        loss = criterion(logits.view(-1, logits.size(-1)), tgt.view(-1))
+        # Store loss at step 1 before any updates
+        if step == 1:
+            print(f"Epoch [{epoch+1}/{num_epochs}] Step [{step}] Initial Train Loss: {loss.item():.4f}")
+            with open(train_loss_csv, 'a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([step, loss.item()])  # Store initial train loss
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+        optimizer.step()
+        scheduler.step()
+
+        total_train_loss += loss.item()
+        global_step = step  # Ensure global step is correct
+
+        # Store training loss every 100 steps
+        if step % print_interval == 0:
+            elapsed = time.time() - step_start_time
+            avg_train_loss = total_train_loss / print_interval
+            train_losses.append((step, avg_train_loss))  # Save step and train loss
+            print(f"Epoch [{epoch+1}/{num_epochs}] Step [{step}] Train Loss: {avg_train_loss:.4f} Time: {elapsed:.2f}s")
+
+            # Write to CSV immediately after calculating average training loss
+            with open(train_loss_csv, 'a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([step, avg_train_loss])  # Append training loss to CSV
+
+            total_train_loss = 0  # Reset loss tracking
+            step_start_time = time.time()  # Reset time tracking
+
+        # Compute validation loss every 100 steps (using 10 random validation batches)
+        if step % val_interval == 0:
+            model.eval()
+            val_loss = 0
+            num_val_batches = 10  # Only take a random sample of 10 batches for validation
+            with torch.no_grad():
+                for i, (val_src, val_tgt) in enumerate(val_loader):
+                    if i &gt;= num_val_batches:
+                        break
+                    val_src, val_tgt = val_src.to(device), val_tgt.to(device)
+                    val_logits = model(val_src)
+                    val_loss += criterion(val_logits.view(-1, val_logits.size(-1)), val_tgt.view(-1)).item()
+            val_loss /= num_val_batches  # Average over 10 batches
+            total_val_loss += val_loss
+
+            val_losses.append((step, val_loss))  # Save step and validation loss
+            print(f"Epoch [{epoch+1}/{num_epochs}] Step [{step}] Validation Loss: {val_loss:.4f}")
+
+            # Write to CSV immediately after calculating validation loss
+            with open(val_loss_csv, 'a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([step, val_loss])  # Append validation loss to CSV
+            model.train()
+
+        # Generate text every 500 steps
+        if step % gen_interval == 0:
+            print("\nGenerated Text:")
+            print(model.generate(encode_text("The storm continued through the night, and in the distance, I saw").unsqueeze(0).to(device), max_new_tokens=50))
+            print("-" * 50)
+
+        # Save checkpoint every 1000 steps
+        if step % save_interval == 0:
+            torch.save({
+                "epoch": epoch,
+                "step": step,
+                "model_state": model.state_dict(),
+                "optimizer_state": optimizer.state_dict(),
+                "scheduler_state": scheduler.state_dict(),
+            }, checkpoint_path)
+            print(f"Checkpoint saved at Step {step}")
+
+    # Print average losses after each epoch
+    print(f"Epoch [{epoch+1}] completed in {time.time() - start_time:.2f}s")
+    print(f"Epoch [{epoch+1}] Average Validation Loss: {total_val_loss / len(val_loader):.4f}")
+
+# Final checkpoint save after training finishes
+torch.save({
+    "epoch": num_epochs,
+    "step": global_step,
+    "model_state": model.state_dict(),
+    "optimizer_state": optimizer.state_dict(),
+    "scheduler_state": scheduler.state_dict(),
+}, checkpoint_path)
+print("Final model checkpoint saved!")</pre>
+</div>
+</div>
+<div class="markdown-cell">
+<div class="text-cell">
+                            Full Implementation
+                        </div>
+</div>
+<div class="code-cell">
+<div class="input">
+<pre>import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import math
+import time
+import os
+from torch.utils.data import DataLoader
+from datasets import load_dataset
+import tiktoken
+import csv
+
+# Display device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+
+torch.cuda.empty_cache()
+
+# ------------------- TOKENIZATION -------------------
+tokenizer = tiktoken.get_encoding("gpt2")
+
+def encode_text(text):
+    return torch.tensor(tokenizer.encode(text), dtype=torch.long)
+
+# ------------------- STREAMING DATASET -------------------
+class OpenWebTextDataset(torch.utils.data.IterableDataset):
+    def __init__(self, seq_length=128, batch_size=48, is_validation=False, val_ratio=0.1, resume_step=0):
+        self.dataset = load_dataset("Skylion007/openwebtext", split="train", streaming=True, trust_remote_code=True)
+        self.seq_length = seq_length
+        self.batch_size = batch_size
+        self.is_validation = is_validation
+        self.val_ratio = val_ratio
+        self.resume_step = resume_step
+        self.token_offset = resume_step * seq_length * batch_size
+
+    def __iter__(self):
+        current_token_count = 0  # Track token count as we iterate through the dataset
+        for i, sample in enumerate(self.dataset):
+            if self.is_validation and i % int(1 / self.val_ratio) != 0:
+                continue
+            elif not self.is_validation and i % int(1 / self.val_ratio) == 0:
+                continue
+
+            # Tokenize the line and calculate its length
+            tokenized_line = encode_text(sample["text"])
+            line_length = len(tokenized_line)
+
+            # Skip ahead if we're past the resume point
+            if current_token_count + line_length &lt; self.token_offset:
+                current_token_count += line_length
+                continue  # Skip this line,  we're not at the resume position yet
+
+            # Once we reach the resume position, start yielding data
+            for i in range(0, line_length - self.seq_length, self.seq_length):
+                X = tokenized_line[i : i + self.seq_length]
+                Y = tokenized_line[i + 1 : i + self.seq_length + 1]
+                yield X, Y
+
+                current_token_count += self.seq_length
+
+# ------------------- MODEL COMPONENTS -------------------
+class LayerNorm(nn.Module):
+    def __init__(self, ndim, bias=True):
+        super().__init__()
+        self.weight = nn.Parameter(torch.ones(ndim))
+        self.bias = nn.Parameter(torch.zeros(ndim)) if bias else None
+
+    def forward(self, input):
+        return F.layer_norm(input, self.weight.shape, self.weight, self.bias, 1e-5)
+
+class CausalSelfAttention(nn.Module):
+    def __init__(self, d_model, num_heads, dropout=0.1):
+        super().__init__()
+        assert d_model % num_heads == 0
+        self.num_heads = num_heads
+        self.head_dim = d_model // num_heads
+
+        self.qkv_proj = nn.Linear(d_model, 3 * d_model, bias=False)
+        self.out_proj = nn.Linear(d_model, d_model, bias=False)
+        self.dropout = nn.Dropout(dropout)
+
+        self.register_buffer("bias", torch.tril(torch.ones(128, 128)).view(1, 1, 128, 128))
+
+    def forward(self, x):
+        B, T, C = x.size()
+        q, k, v = self.qkv_proj(x).chunk(3, dim=-1)
+
+        q = q.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        k = k.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        v = v.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+
+        att = (q @ k.transpose(-2, -1)) * (1.0 / math.sqrt(self.head_dim))
+        att = att.masked_fill(self.bias[:, :, :T, :T] == 0, float('-inf'))
+        att = F.softmax(att, dim=-1)
+        att = self.dropout(att)
+
+        y = att @ v
+        y = y.transpose(1, 2).contiguous().view(B, T, C)
+        return self.out_proj(y)
+
+class TransformerBlock(nn.Module):
+    def __init__(self, d_model, num_heads, hidden_dim, dropout=0.2):
+        super().__init__()
+        self.ln_1 = LayerNorm(d_model)
+        self.attn = CausalSelfAttention(d_model, num_heads, dropout)
+        self.ln_2 = LayerNorm(d_model)
+        self.mlp = nn.Sequential(
+            nn.Linear(d_model, hidden_dim),
+            nn.GELU(),
+            nn.Linear(hidden_dim, d_model),
+            nn.Dropout(dropout)
+        )
+
+    def forward(self, x):
+        x = x + self.attn(self.ln_1(x))
+        x = x + self.mlp(self.ln_2(x))
+        return x
+
+class TransformerDecoder(nn.Module):
+    def __init__(self, d_model, num_heads, hidden_dim, num_layers, vocab_size, max_seq_length):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, d_model)
+        self.pos_embedding = nn.Embedding(max_seq_length, d_model)
+        self.layers = nn.ModuleList([TransformerBlock(d_model, num_heads, hidden_dim) for _ in range(num_layers)])
+        self.ln_f = LayerNorm(d_model)
+        self.output_layer = nn.Linear(d_model, vocab_size, bias=False)
+
+    def forward(self, x):
+        positions = torch.arange(0, x.shape[1], dtype=torch.long, device=x.device).unsqueeze(0)
+        x = self.embedding(x) + self.pos_embedding(positions)
+        for layer in self.layers:
+            x = layer(x)
+        return self.output_layer(self.ln_f(x))
+
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens=50, temperature=1.0, top_k=40):
+        for _ in range(max_new_tokens):
+            logits = self(idx)[:, -1, :] / temperature
+            top_logits, top_indices = torch.topk(logits, k=top_k, dim=-1)
+            probs = F.softmax(top_logits, dim=-1)
+            next_token_idx = torch.multinomial(probs, num_samples=1)
+            next_token = top_indices.gather(-1, next_token_idx)
+            idx = torch.cat([idx, next_token], dim=1)
+        return tokenizer.decode(idx.squeeze().tolist())
+
+# ------------------- TRAINING SETUP -------------------
+d_model = 768
+num_heads = 12
+hidden_dim = 1024
+num_layers = 12
+vocab_size = 50257
+max_seq_length = 128
+batch_size = 48
+
+model = TransformerDecoder(d_model, num_heads, hidden_dim, num_layers, vocab_size, max_seq_length).to(device)
+
+optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4, betas=(0.9, 0.98), weight_decay=1e-2)
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=5000)
+criterion = nn.CrossEntropyLoss()
+
+# ------------------- CHECKPOINTING -------------------
+checkpoint_path = "checkpoint.pth"
+start_epoch, global_step = 0, 0
+
+# Load checkpoint if exists
+if os.path.exists(checkpoint_path):
+    print("Loading checkpoint...")
+    checkpoint = torch.load(checkpoint_path)
+    model.load_state_dict(checkpoint["model_state"])
+    optimizer.load_state_dict(checkpoint["optimizer_state"])
+    scheduler.load_state_dict(checkpoint["scheduler_state"])
+    start_epoch = checkpoint["epoch"]
+    global_step = checkpoint["step"]
+    print(f"Resuming from epoch {start_epoch}, step {global_step}...")
+else:
+    print("No checkpoint found. Starting from scratch.")
+
+# ------------------- TRAINING LOOP -------------------
+# Define CSV paths
+train_loss_csv = 'training_losses.csv'
+val_loss_csv = 'validation_losses.csv'
+
+# Lists to store metrics for later use (e.g., for plotting)
+train_losses = []
+val_losses = []
+
+# Function to write headers if the file doesn't already exist
+def write_csv_headers(file_path, headers):
+    if not os.path.exists(file_path):  # Check if the file exists
+        with open(file_path, 'w', newline='') as f:  # Open in write mode ('w')
+            writer = csv.writer(f)
+            writer.writerow(headers)  # Write the headers to the CSV file
+
+# Write headers to the CSV files only if the file doesn't exist
+write_csv_headers(train_loss_csv, ['Step', 'Train Loss'])
+write_csv_headers(val_loss_csv, ['Step', 'Validation Loss'])
+
+# Training loop
+num_epochs = 5
+print_interval = 100
+gen_interval = 500
+val_interval = 100
+save_interval = 500
+
+for epoch in range(start_epoch, num_epochs):
+    total_train_loss = 0
+    total_val_loss = 0
+    start_time = time.time()
+    step_start_time = time.time()  # Track time for each 100 steps
+
+    # Pass resume_step from checkpoint to dataset
+    train_loader = DataLoader(OpenWebTextDataset(seq_length=max_seq_length, batch_size=batch_size, resume_step=global_step), batch_size=batch_size)
+    val_loader = DataLoader(OpenWebTextDataset(seq_length=max_seq_length, is_validation=True, resume_step=global_step), batch_size=16)
+
+    # Print inputs and targets as text from the first batch
+    for step, (src, tgt) in enumerate(train_loader):
+        # Decode the input tokens (src) back to text
+        input_text = tokenizer.decode(src[0].tolist())  # Only print the first example in the batch
+        target_text = tokenizer.decode(tgt[0].tolist())  # Only print the first example in the batch
+
+        print("\nFirst batch input text (src):")
+        print(input_text)
+
+        print("\nFirst batch target text (tgt):")
+        print(target_text)
+
+        break  # Only print for the first batch and then stop
+
+    # Train Loop
+    for step, (src, tgt) in enumerate(train_loader, start=global_step + 1):
+        src, tgt = src.to(device), tgt.to(device)
+        optimizer.zero_grad()
+
+        logits = model(src)
+        loss = criterion(logits.view(-1, logits.size(-1)), tgt.view(-1))
+        # Store loss at step 1 before any updates
+        if step == 1:
+            print(f"Epoch [{epoch+1}/{num_epochs}] Step [{step}] Initial Train Loss: {loss.item():.4f}")
+            with open(train_loss_csv, 'a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([step, loss.item()])  # Store initial train loss
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+        optimizer.step()
+        scheduler.step()
+
+        total_train_loss += loss.item()
+        global_step = step  # Ensure global step is correct
+
+        # Store training loss every 100 steps
+        if step % print_interval == 0:
+            elapsed = time.time() - step_start_time
+            avg_train_loss = total_train_loss / print_interval
+            train_losses.append((step, avg_train_loss))  # Save step and train loss
+            print(f"Epoch [{epoch+1}/{num_epochs}] Step [{step}] Train Loss: {avg_train_loss:.4f} Time: {elapsed:.2f}s")
+
+            # Write to CSV immediately after calculating average training loss
+            with open(train_loss_csv, 'a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([step, avg_train_loss])  # Append training loss to CSV
+
+            total_train_loss = 0  # Reset loss tracking
+            step_start_time = time.time()  # Reset time tracking
+
+        # Compute validation loss every 100 steps (using 10 random validation batches)
+        if step % val_interval == 0:
+            model.eval()
+            val_loss = 0
+            num_val_batches = 10  # Only take a random sample of 10 batches for validation
+            with torch.no_grad():
+                for i, (val_src, val_tgt) in enumerate(val_loader):
+                    if i &gt;= num_val_batches:
+                        break
+                    val_src, val_tgt = val_src.to(device), val_tgt.to(device)
+                    val_logits = model(val_src)
+                    val_loss += criterion(val_logits.view(-1, val_logits.size(-1)), val_tgt.view(-1)).item()
+            val_loss /= num_val_batches  # Average over 10 batches
+            total_val_loss += val_loss
+
+            val_losses.append((step, val_loss))  # Save step and validation loss
+            print(f"Epoch [{epoch+1}/{num_epochs}] Step [{step}] Validation Loss: {val_loss:.4f}")
+
+            # Write to CSV immediately after calculating validation loss
+            with open(val_loss_csv, 'a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([step, val_loss])  # Append validation loss to CSV
+            model.train()
+
+        # Generate text every 500 steps
+        if step % gen_interval == 0:
+            print("\nGenerated Text:")
+            print(model.generate(encode_text("The storm continued through the night, and in the distance, I saw").unsqueeze(0).to(device), max_new_tokens=50))
+            print("-" * 50)
+
+        # Save checkpoint every 1000 steps
+        if step % save_interval == 0:
+            torch.save({
+                "epoch": epoch,
+                "step": step,
+                "model_state": model.state_dict(),
+                "optimizer_state": optimizer.state_dict(),
+                "scheduler_state": scheduler.state_dict(),
+            }, checkpoint_path)
+            print(f"Checkpoint saved at Step {step}")
+
+    # Print average losses after each epoch
+    print(f"Epoch [{epoch+1}] completed in {time.time() - start_time:.2f}s")
+    print(f"Epoch [{epoch+1}] Average Validation Loss: {total_val_loss / len(val_loader):.4f}")
+
+# Final checkpoint save after training finishes
+torch.save({
+    "epoch": num_epochs,
+    "step": global_step,
+    "model_state": model.state_dict(),
+    "optimizer_state": optimizer.state_dict(),
+    "scheduler_state": scheduler.state_dict(),
+}, checkpoint_path)
+print("Final model checkpoint saved!")</pre>
+</div>
+</div>
+</div>
+<!-- Render the rest of the notebook content (code, etc.) -->
+</div>
+</div>
+</body>
+</html>
