@@ -65,7 +65,10 @@
                     <div class="horizontal"></div>
                     <div class="description">
                         <p>
-                            This project developed a semantic sentiment analysis model using the BERT architecture to classify public sentiment. A dataset of over 10,000 tweets, curated following the Autumn 2022 Latvian government elections, was manually annotated for supervised learning. The model’s performance was compared against baseline classifiers like Naive Bayes (NB) and Support Vector Machines (SVM).
+                            This project developed a semantic sentiment analysis model using the BERT architecture to classify public sentiment. A dataset of over 10,000 tweets, collected following the Autumn 2022 Latvian government elections, was manually annotated for supervised learning. Extensive data preprocessing was performed, including text cleaning (removal of special characters, punctuation, numbers, and URLs), tokenization, stopword removal, and handling contractions. Additionally, a Java-based lemmatization program was used to standardize words to their base forms, ensuring linguistic consistency. The dataset was then balanced to mitigate class imbalances before training.
+                        </p>
+                        <p>
+                            The model was built using the Latvian BERT (LvBERT) from Hugging Face and fine-tuned for multi-class sentiment classification. Training and validation splits were created, and the model was optimized using AdamW with cross-entropy loss. The model’s performance was compared against baseline classifiers such as Naïve Bayes (NB), Support Vector Machines (SVM), and Logistic Regression (LR), with a grid search conducted to fine-tune hyperparameters. The BERT model outperformed traditional machine learning models, achieving an accuracy of 93%.
                         </p>
                     </div>
                     <div class="horizontal"></div>
