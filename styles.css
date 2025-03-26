@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Font consistency */
     line-height: 1.6;
-    background: linear-gradient(90deg, #2C3E50, #34495E 30%, #7F8C8D 60%, #D4B5A5 75%, #F2D7C3 85%);
+    background: #2C3E50;
     background-size: cover; 
     color: #333;
     padding: 20px 0;
